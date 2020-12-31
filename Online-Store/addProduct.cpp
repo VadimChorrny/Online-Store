@@ -4,14 +4,13 @@
 
 addProduct::addProduct()
 {
-	product.nameProduct = "~~~~default no name~~~~";
-	product.typeProduct = "~~~~default no type~~~~";
-	product.priceProduct = "~~~~default no price~~~~";
+	product.nameProduct = "~~~~ Default no name ~~~~";
+	product.typeProduct = "~~~~ Default no type ~~~~";
+	product.priceProduct = "~~~ Default no price ~~~~";
 }
 
 addProduct::~addProduct()
-{
-}
+{}
 
 void addProduct::input()
 {
@@ -31,6 +30,11 @@ void addProduct::input()
 	cin >> product.typeProduct;
 	n.push_back(product.typeProduct);
 	cout << endl;
+	
+	cout << "Enter model product:\t" << endl;
+	cin >> product.modelProduct;
+	n.push_back(product.modelProduct);
+	cout << endl;
 
 	cout << "Enter price product:\t" << endl;
 	cin >> product.priceProduct;
@@ -40,7 +44,7 @@ void addProduct::input()
 }
 
 
-void addProduct::print()
+void addProduct::print() const
 {
 	system("cls");
 	cout << "~~~~~~OUTPUT~~~~~~" << endl;
@@ -73,6 +77,14 @@ void addProduct::setTypeProduct(const string& type)
 	
 }
 
+void addProduct::setModelProduct(const string& model)
+{
+	if (model != " ")
+		this->product.modelProduct = model;
+	else
+		cerr << "Error with model" << endl;
+}
+
 void addProduct::setPriceProduct(const int& price)
 {
 	if (price != 0)
@@ -81,8 +93,3 @@ void addProduct::setPriceProduct(const int& price)
 		cerr << "Error with price" << endl;
 }
 
-void addProduct::sortProduct()
-{
-	sort(n.begin(), n.end());	
-	// output after sorting 
-}

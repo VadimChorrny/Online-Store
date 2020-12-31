@@ -140,10 +140,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="addProduct.cpp" />
+    <ClCompile Include="DeleteProduct.cpp" />
     <ClCompile Include="Online-Store.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="addProduct.h" />
+    <ClInclude Include="DeleteProduct.h" />
+    <ClInclude Include="Lib.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
