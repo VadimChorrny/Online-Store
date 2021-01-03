@@ -4,6 +4,7 @@
 #include <fstream>
 #include <vector>
 #include <algorithm>
+#include <fstream>
 
 using namespace std;
 
@@ -31,6 +32,7 @@ private:
 
 	Product product;
 	vector<string> n;
+	ofstream outData;
 
 
 };

@@ -16,6 +16,7 @@ void addProduct::input()
 {
 	//ifstream in("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Name.txt");
 	
+	outData.open("Product-List.csv", ios::app);
 
 	cout << endl;
 	cout << "~~~~~~INPUT~~~~~~" << endl;
@@ -23,22 +24,22 @@ void addProduct::input()
 
 	cout << "Enter name product:\t" << endl;
 	cin >> product.nameProduct;
-	n.push_back(product.nameProduct);
+	outData << product.nameProduct << endl;
 	cout << endl;
 
 	cout << "Enter type product:\t" << endl;
 	cin >> product.typeProduct;
-	n.push_back(product.typeProduct);
+	outData << product.typeProduct << endl;
 	cout << endl;
 	
 	cout << "Enter model product:\t" << endl;
 	cin >> product.modelProduct;
-	n.push_back(product.modelProduct);
+	outData << product.modelProduct << endl;
 	cout << endl;
 
 	cout << "Enter price product:\t" << endl;
 	cin >> product.priceProduct;
-	n.push_back(product.priceProduct);
+	outData << product.priceProduct << endl;
 	cout << endl;
 	
 }
