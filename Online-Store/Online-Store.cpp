@@ -22,9 +22,10 @@ int main()
 	d.input();
 	d.print();
 
-	cout << "______WORKED DELETE PRODUCT CLASS _____" << endl;
+
+	/*cout << "______WORKED DELETE PRODUCT CLASS _____" << endl;
 
 	del();
-	d.print();
+	d.print();*/
 
 }
