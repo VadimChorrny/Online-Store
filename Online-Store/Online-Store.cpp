@@ -2,30 +2,42 @@
 #include "DeleteProduct.h"
 #include "Lib.h"
 
-void del()
-{
-	DeleteProduct t;
+// init
+addProduct d;
 
-	string elem;
-	string str;
-	cout << "Enter element wich need remove:\t" << endl;
-	cin >> elem;
-	cout << "Enter std:\t" << endl;
-	cin >> str;
-	t.deleteProduct(elem,str);
-	
+void add()
+{
+	d.input();
+	d.print();
 }
 
 int main()
 {
-	addProduct d;
-	d.input();
-	d.print();
+	int action = 0;
 
-
-	/*cout << "______WORKED DELETE PRODUCT CLASS _____" << endl;
-
-	del();
-	d.print();*/
+	do
+	{
+		cout << " ________________________" << endl;
+		cout << "|       SHOPING STORE    |" << endl;
+		cout << "|------------------------|" << endl;
+		cout << "| 1. ADD PRODUCT IN DB   |" << endl;
+		cout << "|------------------------|" << endl;
+		cout << "| 2.       EXIT          |" << endl;
+		cout << "|------------------------|" << endl;
+		cout << "Enter action ->\t";
+		cin >> action;
+		switch (action)
+		{
+		case 1: 
+		{
+			system("cls");
+			add();
+		}break;
+		case 2:
+		{
+			system("cls");
+		}
+		}
+	} while (action != 2);
 
 }
