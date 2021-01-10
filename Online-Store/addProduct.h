@@ -14,6 +14,15 @@ struct Product
 	string typeProduct;
 	string priceProduct;
 	string modelProduct;
+	
+};
+
+struct Keyboard
+{
+	string typeKeyboard;
+	string connect;
+	string price;
+	size_t keyboardCounter;
 };
 
 class addProduct
@@ -27,13 +36,19 @@ public:
 	void setTypeProduct(const string& type);
 	void setModelProduct(const string& model);
 	void setPriceProduct(const int& price);
+
+	// set for product
+
+	void setTypeKeyboard(const string& typeKeyboard);
+	void setConnectKeyboard(const string& connect);
+	void setPriceKeyboard(const string& priceKeyboard);
 	
 private:
 
 	Product product;
+	Keyboard keyboard;
 	vector<string> n;
 	ofstream outData;
-
 
 };
 

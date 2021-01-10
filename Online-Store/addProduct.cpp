@@ -22,14 +22,32 @@ void addProduct::input()
 	cout << "~~~~~~INPUT~~~~~~" << endl;
 	cout << endl;
 
+	cout << "Enter type product:\t" << endl;
+	cin >> product.typeProduct;
+	if (product.typeProduct == "Keyboard" || product.typeProduct == "keyboard")
+	{
+		++keyboard.keyboardCounter;
+		cout << "~~~WORKED KEYBOARD~~~" << endl;
+		cout << "Enter type keyboard:\t";
+		cin >> keyboard.typeKeyboard;
+		setTypeKeyboard(keyboard.typeKeyboard);
+
+		cout << "Enter how connect keyboard:\t";
+		cin >> keyboard.connect;
+		setConnectKeyboard(keyboard.connect);
+
+		cout << "Enter price keyboard:\t";
+		cin >> keyboard.price;
+		setPriceKeyboard(keyboard.price);
+
+		outData << product.typeProduct << endl;
+		cout << "~~~~~~~~~~~~~~~~~~~~~" << endl;
+	}
+	cout << endl;
+
 	cout << "Enter name product:\t" << endl;
 	cin >> product.nameProduct;
 	outData << product.nameProduct << endl;
-	cout << endl;
-
-	cout << "Enter type product:\t" << endl;
-	cin >> product.typeProduct;
-	outData << product.typeProduct << endl;
 	cout << endl;
 	
 	cout << "Enter model product:\t" << endl;
@@ -92,5 +110,32 @@ void addProduct::setPriceProduct(const int& price)
 		this->product.priceProduct = price;
 	else
 		cerr << "Error with price" << endl;
+}
+
+void addProduct::setTypeKeyboard(const string& typeKeyboard)
+{
+
+	if (!typeKeyboard.empty())
+		keyboard.typeKeyboard = typeKeyboard; 
+	else
+		cerr << "error with type keyboard" << endl;
+	// NEED ADD ELSE IF
+		
+}
+
+void addProduct::setConnectKeyboard(const string& connect)
+{
+	if (!connect.empty())
+		this->keyboard.connect = connect;
+	else
+		cerr << "error with connect keyboard" << endl;
+}
+
+void addProduct::setPriceKeyboard(const string& priceKeyboard)
+{
+	if (priceKeyboard != " ")
+		this->keyboard.price = priceKeyboard;
+	else
+		cerr << "error with price keyboard" << endl;
 }
 

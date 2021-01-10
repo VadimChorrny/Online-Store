@@ -3,18 +3,11 @@
 #include "Lib.h"
 
 // init
-addProduct d;
 
 void add()
 {
-	d.input();
-	d.print();
-}
-
-int main()
-{
+	addProduct d;
 	int action = 0;
-
 	do
 	{
 		cout << " ________________________" << endl;
@@ -28,10 +21,11 @@ int main()
 		cin >> action;
 		switch (action)
 		{
-		case 1: 
+		case 1:
 		{
 			system("cls");
-			add();
+			d.input();
+			d.print();
 		}break;
 		case 2:
 		{
@@ -40,4 +34,10 @@ int main()
 		}
 	} while (action != 2);
 
+}
+
+
+int main()
+{
+	add();
 }
