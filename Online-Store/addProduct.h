@@ -22,26 +22,47 @@ struct Keyboard
 	string typeKeyboard;
 	string connect;
 	string price;
+	string colorKeyboard;
 	size_t keyboardCounter;
+};
+
+struct Mouse
+{
+	string typeMouse;
+	string connect;
+	string color;
+	size_t MAX_CLICK;
+	size_t mouseCounter;
+	string price;
 };
 
 class addProduct
 {
 public:
+
 	addProduct();
 	~addProduct();
+
 	void input();
 	void print() const;
+
 	void setNameProduct(const string& name);		
 	void setTypeProduct(const string& type);
 	void setModelProduct(const string& model);
 	void setPriceProduct(const int& price);
 
-	// set for product
+	// set for keyboard
 
 	void setTypeKeyboard(const string& typeKeyboard);
 	void setConnectKeyboard(const string& connect);
 	void setPriceKeyboard(const string& priceKeyboard);
+	void setColorKeyboard(const string& colorKeyboard);
+	void printKeyboard() const;
+
+	// set for mouse
+
+
+
 	
 private:
 

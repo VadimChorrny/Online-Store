@@ -25,7 +25,7 @@ void add()
 		{
 			system("cls");
 			d.input();
-			d.print();
+			//d.print();
 		}break;
 		case 2:
 		{
