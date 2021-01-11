@@ -36,6 +36,15 @@ struct Mouse
 	string price;
 };
 
+struct Monitor
+{
+	string typeMonitor;
+	string typeMatrix;
+	size_t lengthMonitor;
+	size_t priceMonitor;
+	size_t monitorCounter;
+};
+
 class addProduct
 {
 public:
@@ -66,6 +75,14 @@ public:
 	void setPriceMouse(const string& priceMouse);
 	void setColorMouse(const string& colorMouse);
 	void printMouse() const;
+
+	// set for monitor
+
+	void setTypeMonitor(const string& typeMonitor);
+	void setLengthMonitor(const size_t& lengthMonitor);
+	void setTypeMatrix(const string& typeMatrix);
+	void setPriceMonitor(const size_t& priceMonitor);
+	void printMonitor() const;
 	
 
 
@@ -75,6 +92,7 @@ private:
 	Product product;
 	Keyboard keyboard;
 	Mouse mouse;
+	Monitor monitor;
 	vector<string> n;
 	ofstream outData;
 

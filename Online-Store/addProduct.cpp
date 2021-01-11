@@ -53,8 +53,7 @@ void addProduct::input()
 		cout << "~~~~~~~~~~~~~~~~~~~~~" << endl;
 		printKeyboard();
 	}
-	cout << endl;
-	if (product.typeProduct == "Mouse" || product.typeProduct == "mouse")
+	else if (product.typeProduct == "Mouse" || product.typeProduct == "mouse")
 	{
 		system("cls");
 		outData.open("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Mouse.csv", ios::app);
@@ -87,6 +86,39 @@ void addProduct::input()
 		outData << mouse.price << endl;
 		cout << "~~~~~~~~~~~~~~~~~~~~~" << endl;
 		printMouse();
+
+	}
+	else if (product.typeProduct == "Monitor" || product.typeProduct == "monitor")
+	{
+		system("cls");
+		outData.open("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Monitor.csv", ios::app);
+		cout << "~~~~~WORKED MONITOR~~~~~" << endl;
+		++monitor.monitorCounter;
+
+		cout << "Enter type monitor:\t";
+		cin >> monitor.typeMonitor;
+		setTypeMonitor(monitor.typeMonitor);
+		outData << monitor.typeMonitor << endl;
+
+		cout << "Enter type matrix:\t";
+		cin >> monitor.typeMatrix;
+		setTypeMatrix(monitor.typeMatrix);
+		outData << monitor.typeMatrix << endl;
+
+		cout << "Enter length monitor:\t";
+		cin >> monitor.lengthMonitor;
+		setLengthMonitor(monitor.lengthMonitor);
+		outData << monitor.lengthMonitor << endl;
+
+		cout << "Enter price for monitor:\t";
+		cin >> monitor.priceMonitor;
+		setPriceMonitor(monitor.priceMonitor);
+		outData << monitor.priceMonitor << endl;
+
+		cout << "~~~~~~~~~~~~~~~~~~~~~" << endl;
+
+		printMonitor();
+
 
 	}
 
@@ -256,6 +288,50 @@ void addProduct::printMouse() const
 	cout << "Max click:\t" << mouse.MAX_CLICK << endl;
 	cout << "Mouse price:\t" << mouse.price << "$" << endl;
 	cout << "~~~~~~~~~~~~~~~~~~~" << endl;
+	system("pause");
+	system("cls");
+}
+
+void addProduct::setTypeMonitor(const string& typeMonitor)
+{
+	if (!typeMonitor.empty())
+		this->monitor.typeMonitor = typeMonitor;
+	else
+		cerr << "Error with type monitor" << endl;
+}
+
+void addProduct::setLengthMonitor(const size_t& lengthMonitor)
+{
+	if (lengthMonitor != 0)
+		this->monitor.lengthMonitor = lengthMonitor;
+	else
+		cerr << "Error with length monitor" << endl;
+}
+
+void addProduct::setTypeMatrix(const string& typeMatrix)
+{
+	if (!typeMatrix.empty())
+		this->monitor.typeMatrix = typeMatrix;
+	else
+		cerr << "Error with type matrix" << endl;
+}
+
+void addProduct::setPriceMonitor(const size_t& priceMonitor)
+{
+	if (priceMonitor != 0)
+		this->monitor.priceMonitor = priceMonitor;
+	else
+		cerr << "Error with price monitor" << endl;
+}
+
+void addProduct::printMonitor() const
+{
+	system("cls");
+	cout << "~~~~MONITOR~~~~" << endl;
+	cout << "Type monitor:\t" << monitor.typeMonitor << endl;
+	cout << "Type matrix:\t" << monitor.typeMatrix << endl;
+	cout << "Length monitor:\t" << monitor.lengthMonitor << "dm" << endl;
+	cout << "Price:\t" << monitor.priceMonitor << "$" << endl;
 	system("pause");
 	system("cls");
 }

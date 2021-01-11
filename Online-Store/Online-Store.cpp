@@ -15,7 +15,9 @@ void add()
 		cout << "|------------------------|" << endl;
 		cout << "| 1. ADD PRODUCT IN DB   |" << endl;
 		cout << "|------------------------|" << endl;
-		cout << "| 2.       EXIT          |" << endl;
+		cout << "| 2. DELETE PRODUCT      |" << endl;
+		cout << "|------------------------|" << endl;
+		cout << "| 3.       EXIT          |" << endl;
 		cout << "|------------------------|" << endl;
 		cout << "Enter action ->\t";
 		cin >> action;
@@ -25,7 +27,6 @@ void add()
 		{
 			system("cls");
 			d.input();
-			//d.print();
 		}break;
 		case 2:
 		{
