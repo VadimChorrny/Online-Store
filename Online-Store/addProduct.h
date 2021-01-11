@@ -60,7 +60,13 @@ public:
 	void printKeyboard() const;
 
 	// set for mouse
-
+	void setTypeMouse(const string& typeMouse);
+	void setConnectMouse(const string& connect);
+	void setMaxClickMouse(const size_t& MAX_CLICKED);
+	void setPriceMouse(const string& priceMouse);
+	void setColorMouse(const string& colorMouse);
+	void printMouse() const;
+	
 
 
 	
@@ -68,6 +74,7 @@ private:
 
 	Product product;
 	Keyboard keyboard;
+	Mouse mouse;
 	vector<string> n;
 	ofstream outData;
 
