@@ -142,6 +142,8 @@
     <ClCompile Include="addProduct.cpp" />
     <ClCompile Include="DeleteProduct.cpp" />
     <ClCompile Include="Keyboard.cpp" />
+    <ClCompile Include="Monitor.cpp" />
+    <ClCompile Include="Mouse.cpp" />
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -149,6 +151,8 @@
     <ClInclude Include="DeleteProduct.h" />
     <ClInclude Include="Keyboard.h" />
     <ClInclude Include="Lib.h" />
+    <ClInclude Include="Monitor.h" />
+    <ClInclude Include="Mouse.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

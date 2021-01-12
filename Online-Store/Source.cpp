@@ -41,6 +41,7 @@ void add()
 int main()
 {
 	//add();
-	Keyboard key;
-	key.input();
+	addProduct d;
+	d.generateSpecCode();
+
 }
