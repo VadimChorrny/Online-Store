@@ -141,20 +141,26 @@
   <ItemGroup>
     <ClCompile Include="addProduct.cpp" />
     <ClCompile Include="DeleteProduct.cpp" />
+    <ClCompile Include="Headphones.cpp" />
     <ClCompile Include="Keyboard.cpp" />
+    <ClCompile Include="Laptop.cpp" />
     <ClCompile Include="Monitor.cpp" />
     <ClCompile Include="Mouse.cpp" />
     <ClCompile Include="Phone.cpp" />
     <ClCompile Include="Source.cpp" />
+    <ClCompile Include="Tablet.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="addProduct.h" />
     <ClInclude Include="DeleteProduct.h" />
+    <ClInclude Include="Headphones.h" />
     <ClInclude Include="Keyboard.h" />
+    <ClInclude Include="Laptop.h" />
     <ClInclude Include="Lib.h" />
     <ClInclude Include="Monitor.h" />
     <ClInclude Include="Mouse.h" />
     <ClInclude Include="Phone.h" />
+    <ClInclude Include="Tablet.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -4,6 +4,9 @@
 #include <ctime>
 #include "Monitor.h"
 #include "Phone.h"
+#include "Tablet.h"
+#include "Headphones.h"
+#include "Laptop.h"
 
 addProduct::addProduct()
 {
@@ -41,6 +44,23 @@ void addProduct::input()
 	{
 		Phone phone;
 		phone.input();
+	}
+	else if (product.typeProduct == "Tablet" || product.typeProduct == "tablet")
+	{
+
+		Tablet tablet;
+		tablet.input();
+	}
+	else if (product.typeProduct == "Headphone" || product.typeProduct == "Head" ||
+		product.typeProduct == "headphones" || product.typeProduct == "head")
+	{
+		HeadPhones headphones;
+		headphones.input();
+	}
+	else if (product.typeProduct == "Laptop" || product.typeProduct == "laptop")
+	{
+		Laptop laptop;
+		laptop.input();
 	}
 	else 
 	{

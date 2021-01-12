@@ -36,6 +36,15 @@
     <ClCompile Include="Phone.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Tablet.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Headphones.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Laptop.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="addProduct.h">
@@ -57,6 +66,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Phone.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Tablet.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Headphones.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Laptop.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
