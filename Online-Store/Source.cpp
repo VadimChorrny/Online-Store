@@ -7,6 +7,7 @@
 void add()
 {
 	addProduct d;
+
 	int action = 0;
 	do
 	{
@@ -15,7 +16,7 @@ void add()
 		cout << "|------------------------|" << endl;
 		cout << "| 1. ADD PRODUCT IN DB   |" << endl;
 		cout << "|------------------------|" << endl;
-		cout << "| 2. DELETE PRODUCT      |" << endl;
+		cout << "| 2. Generate code       |" << endl;
 		cout << "|------------------------|" << endl;
 		cout << "| 3.       EXIT          |" << endl;
 		cout << "|------------------------|" << endl;
@@ -30,18 +31,21 @@ void add()
 		}break;
 		case 2:
 		{
+			d.generateSpecCode();
+		}break;
+		case 3:
+		{
 			system("cls");
+		}break;
 		}
-		}
-	} while (action != 2);
+	} while (action != 3);
 
 }
 
 
 int main()
 {
-	//add();
-	addProduct d;
-	d.generateSpecCode();
+	add();
+
 
 }

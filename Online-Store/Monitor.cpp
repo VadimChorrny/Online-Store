@@ -32,6 +32,14 @@ void Monitor::input()
 	printMonitor();
 }
 
+void Monitor::setNameCompany(const string& nameCompany)
+{
+	if (!nameCompany.empty())
+		this->name = nameCompany;
+	else
+		cerr << "Error with name company monitor" << endl;
+}
+
 void Monitor::setTypeMonitor(const string& typeMonitor)
 {
 	if (!typeMonitor.empty())
@@ -68,6 +76,7 @@ void Monitor::printMonitor() const
 {
 	system("cls");
 	cout << "~~~~MONITOR~~~~" << endl;
+	cout << "Company name monitor:\t" << name << endl;
 	cout << "Type monitor:\t" << typeMonitor << endl;
 	cout << "Type matrix:\t" << typeMatrix << endl;
 	cout << "Length monitor:\t" << lengthMonitor << "dm" << endl;

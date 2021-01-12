@@ -26,6 +26,7 @@ public:
 
 	void input();
 	void print() const;
+	virtual void setNameCompany(const string& nameCompany);
 	void generateSpecCode();
 
 private:

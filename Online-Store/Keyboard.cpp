@@ -6,6 +6,12 @@ void Keyboard::input()
 	outData.open("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Keyboard.csv", ios::app);
 	++keyboardCounter;
 	cout << "~~~WORKED KEYBOARD~~~" << endl;
+
+	cout << "Enter name company keyboard:\t";
+	cin >> nameCompany;
+	setNameCompany(nameCompany);
+	outData << nameCompany << endl;
+
 	cout << "Enter type keyboard:\t";
 	cin >> typeKeyboard;
 	setTypeKeyboard(typeKeyboard);
@@ -31,6 +37,8 @@ void Keyboard::input()
 	printKeyboard();
 }
 
+
+
 void Keyboard::setTypeKeyboard(const string& typeKeyboard)
 {
 
@@ -40,6 +48,14 @@ void Keyboard::setTypeKeyboard(const string& typeKeyboard)
 		cerr << "error with type keyboard" << endl;
 	// NEED ADD ELSE IF
 
+}
+
+void Keyboard::setNameCompany(const string& nameCompany)
+{
+	if (!nameCompany.empty())
+		this->nameCompany = nameCompany;
+	else
+		cerr << "Error with name company keyboard" << endl;
 }
 
 void Keyboard::setConnectKeyboard(const string& connect)
@@ -71,6 +87,7 @@ void Keyboard::printKeyboard() const
 	system("cls");
 	cout << "~~~~~~KEYBOARD~~~~~~" << endl;
 	cout << "Type keyboard:\t" << typeKeyboard << endl;
+	cout << "Company name:\t" << nameCompany << endl;
 	cout << "How to connect keyboard:\t" << connect << endl;
 	cout << "Color keyboard:\t" << colorKeyboard << endl;
 	cout << "Price keyboard:\t" << price << "$" << endl;

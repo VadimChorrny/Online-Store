@@ -35,6 +35,14 @@ void Mouse::input()
 	printMouse();
 }
 
+void Mouse::setNameCompany(const string& nameCompany)
+{
+	if (!nameCompany.empty())
+		this->name = nameCompany;
+	else
+		cerr << "Error with name company mouse" << endl;
+}
+
 void Mouse::setTypeMouse(const string& typeMouse)
 {
 	if (!typeMouse.empty())
@@ -80,6 +88,7 @@ void Mouse::printMouse() const
 {
 	system("cls");
 	cout << "~~~~Mouse Print~~~~" << endl;
+	cout << "Company name:\t" << name << endl;
 	cout << "Type mouse:\t" << typeMouse << endl;
 	cout << "Connect mouse:\t" << connect << endl;
 	cout << "Color mouse:\t" << color << endl;

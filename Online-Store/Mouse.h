@@ -6,6 +6,7 @@ class Mouse :
 public:
 
 	void input();
+	void setNameCompany(const string& nameCompany) override;
 	void setTypeMouse(const string& typeMouse);
 	void setConnectMouse(const string& connect);
 	void setMaxClickMouse(const size_t& MAX_CLICKED);
@@ -17,6 +18,7 @@ private:
 	ofstream outData;
 	string typeMouse;
 	string connect;
+	string name;
 	string color;
 	size_t MAX_CLICK;
 	size_t mouseCounter;

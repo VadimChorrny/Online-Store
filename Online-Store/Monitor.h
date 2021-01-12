@@ -5,12 +5,14 @@ class Monitor :
 {
 public:
 	void input();
+	void setNameCompany(const string& nameCompany) override;
 	void setTypeMonitor(const string& typeMonitor);
 	void setLengthMonitor(const size_t& lengthMonitor);
 	void setTypeMatrix(const string& typeMatrix);
 	void setPriceMonitor(const size_t& priceMonitor);
 	void printMonitor() const;
 private:
+	string name;
 	string typeMonitor;
 	string typeMatrix;
 	size_t lengthMonitor;
