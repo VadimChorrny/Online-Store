@@ -1,5 +1,5 @@
 #include "addProduct.h"
-#include "DeleteProduct.h"
+#include "Keyboard.h"
 #include "Lib.h"
 
 // init
@@ -40,5 +40,7 @@ void add()
 
 int main()
 {
-	add();
+	//add();
+	Keyboard key;
+	key.input();
 }
