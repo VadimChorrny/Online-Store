@@ -5,7 +5,9 @@ class HeadPhones :
 {
 public:
 	void input();
-	void setNameHeadPhones(const string& nameCompanyHeadPhones);
+	void setNameCompany(const string& nameCompany) override;
+	void setModelProduct(const string& model);
+	void generateNumberProduct() override;
 	void setConnectHeadPhones(const string& connect);
 	void setPriceHeadPhones(const string& priceHeadPhones);
 	void setColorHeadPhones(const string& colorHeadPhones);
@@ -13,9 +15,11 @@ public:
 private:
 	ofstream outData;
 	string nameCompany;
+	string model;
 	string connect;
 	string price;
 	string colorHeadPhones;
 	size_t headphonesCounter;
+	vector<int> num;
 };
 

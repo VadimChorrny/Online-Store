@@ -9,7 +9,7 @@ void HeadPhones::input()
 
 	cout << "Enter name company:\t";
 	cin >> nameCompany;
-	setNameHeadPhones(nameCompany);
+	setNameCompany(nameCompany);
 	outData << nameCompany << endl;
 
 	cout << "Enter connect to HeadPhones:\t";
@@ -30,12 +30,33 @@ void HeadPhones::input()
 	printHeadPhones();
 }
 
-void HeadPhones::setNameHeadPhones(const string& nameCompanyHeadPhones)
+void HeadPhones::setNameCompany(const string& nameCompany)
 {
-	if (!nameCompanyHeadPhones.empty())
-		this->nameCompany = nameCompanyHeadPhones;
+	if (!nameCompany.empty())
+		this->nameCompany = nameCompany;
 	else
 		cerr << "Error with name company HeadPhones" << endl;
+}
+
+void HeadPhones::setModelProduct(const string& model)
+{
+	if (!model.empty())
+		this->model = model;
+	else
+		cerr << "Error with model!" << endl;
+}
+
+void HeadPhones::generateNumberProduct()
+{
+	int b = 10;
+	cout << "Product number:\t";
+	for (int a = 0; a <= b; a++)
+	{
+		int jmax = rand() % 10;
+		num.push_back(jmax);
+		cout << num[a];
+	}
+	cout << endl;
 }
 
 void HeadPhones::setConnectHeadPhones(const string& connect)
@@ -71,6 +92,8 @@ void HeadPhones::printHeadPhones() const
 	cout << "Color HeadPhones:\t" << colorHeadPhones << endl;
 	cout << "Price HeadPhones:\t" << price << "$" << endl;
 	cout << "Quantity HeadPhones:\t" << headphonesCounter << "pieces" << endl;
+	HeadPhones head;
+	head.generateNumberProduct();
 	cout << "~~~~~~~~~~~~~~~~~~~~" << endl;
 	system("pause");
 	system("cls");

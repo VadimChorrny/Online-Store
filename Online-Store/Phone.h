@@ -5,7 +5,9 @@ class Phone :
 {
 public:
 	void input();
-	void setNamePhone(const string& nameCompanyPhone);
+	void setNameCompany(const string& nameCompany) override;
+	void setModelProduct(const string& model) override;
+	void generateNumberProduct() override;
 	void setChargingPhone(const string& connect);
 	void setPricePhone(const string& pricePhone);
 	void setColorPhone(const string& colorMouse);
@@ -13,10 +15,12 @@ public:
 private:
 	ofstream outData;
 	string nameCompany;
+	string model;
 	string charging;
 	string price;
 	string colorPhone;
 	size_t phoneCounter;
+	vector<int> num;
 
 
 };

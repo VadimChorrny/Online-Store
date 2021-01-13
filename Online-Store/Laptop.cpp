@@ -9,7 +9,7 @@ void Laptop::input()
 
 	cout << "Enter name company:\t";
 	cin >> nameCompany;
-	setNameLaptop(nameCompany);
+	setNameCompany(nameCompany);
 	outData << nameCompany << endl;
 
 	cout << "Enter charging Laptop:\t";
@@ -30,12 +30,25 @@ void Laptop::input()
 	printLaptop();
 }
 
-void Laptop::setNameLaptop(const string& nameCompanyLaptop)
+void Laptop::setNameCompany(const string& nameCompanyLaptop)
 {
 	if (!nameCompanyLaptop.empty())
 		this->nameCompany = nameCompanyLaptop;
 	else
 		cerr << "Error with name company Laptop" << endl;
+}
+
+void Laptop::generateNumberProduct()
+{
+	int b = 10;
+	cout << "Product number:\t";
+	for (int a = 0; a <= b; a++)
+	{
+		int jmax = rand() % 10;
+		num.push_back(jmax);
+		cout << num[a];
+	}
+	cout << endl;
 }
 
 void Laptop::setChargingLaptop(const string& connect)
@@ -71,6 +84,8 @@ void Laptop::printLaptop() const
 	cout << "Color Laptop:\t" << colorLaptop << endl;
 	cout << "Price Laptop:\t" << price << "$" << endl;
 	cout << "Quantity Laptop:\t" << laptopCounter << "pieces" << endl;
+	Laptop lap;
+	lap.generateNumberProduct();
 	cout << "~~~~~~~~~~~~~~~~~~~~" << endl;
 	system("pause");
 	system("cls");

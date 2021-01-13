@@ -83,23 +83,5 @@ void addProduct::setNameCompany(const string & nameCompany)
 	cout << "~~~~DEFAULT NO NAME COMPANY~~~~" << endl;
 }
 
-void addProduct::generateSpecCode()
-{
-	vector<int> s;
-	srand(time(NULL));
-
-	int b = 20 + rand() % 20;
-	system("cls");
-	cout << "___________________GENERATE SECURITY CODE__________________" << endl;
-	cout << "YOUR CODE IS ===>:\t";
-	for (int a = 0; a <= b; a++)
-	{
-		int jmax = rand() % 20;
-		s.push_back(jmax);
-		cout << s[a];
-	}
-	cout << endl;
-	cout << "___________________________________________________________" << endl;
-	system("pause");
-	system("cls");
-}
+void addProduct::generateNumberProduct()
+{}

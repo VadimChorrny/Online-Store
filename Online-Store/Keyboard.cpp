@@ -12,6 +12,11 @@ void Keyboard::input()
 	setNameCompany(nameCompany);
 	outData << nameCompany << endl;
 
+	cout << "Enter model keyboard:\t";
+	cin >> model;
+	setModelProduct(model);
+	outData << model << endl;
+
 	cout << "Enter type keyboard:\t";
 	cin >> typeKeyboard;
 	setTypeKeyboard(typeKeyboard);
@@ -58,6 +63,32 @@ void Keyboard::setNameCompany(const string& nameCompany)
 		cerr << "Error with name company keyboard" << endl;
 }
 
+void Keyboard::setModelProduct(const string& model)
+{
+	if (!model.empty())
+		this->model = model;
+	else
+		cerr << "Error with model keyboard" << endl;
+}
+
+void Keyboard::generateNumberProduct()
+{
+
+	outData.open("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Keyboard.csv", ios::app);
+
+	srand(time(NULL));
+
+	int b = 10;
+	cout << "Product number:\t";
+	for (int a = 0; a <= b; a++)
+	{
+		int jmax = rand() % 10;
+		num.push_back(jmax);
+		cout << num[a];
+	}
+	cout << endl;
+}
+
 void Keyboard::setConnectKeyboard(const string& connect)
 {
 	if (!connect.empty())
@@ -91,7 +122,9 @@ void Keyboard::printKeyboard() const
 	cout << "How to connect keyboard:\t" << connect << endl;
 	cout << "Color keyboard:\t" << colorKeyboard << endl;
 	cout << "Price keyboard:\t" << price << "$" << endl;
-	cout << "Quantity keyboard:\t" << keyboardCounter << "pieces" << endl;
+	Keyboard key;
+	key.generateNumberProduct();
+	/*cout << "Quantity keyboard:\t" << keyboardCounter << "pieces" << endl;*/
 	cout << "~~~~~~~~~~~~~~~~~~~~" << endl;
 	system("pause");
 }

@@ -2,8 +2,6 @@
 #include "Keyboard.h"
 #include "Lib.h"
 
-// init
-
 void add()
 {
 	addProduct d;
@@ -31,7 +29,7 @@ void add()
 		}break;
 		case 2:
 		{
-			d.generateSpecCode();
+			d.generateNumberProduct();
 		}break;
 		case 3:
 		{
@@ -46,6 +44,4 @@ void add()
 int main()
 {
 	add();
-
-
 }

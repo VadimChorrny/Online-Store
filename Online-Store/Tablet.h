@@ -7,7 +7,9 @@ class Tablet : public addProduct
 public:
 	
 	void input();
-	void setNameTablet(const string& nameCompanyTablet);
+	void setNameCompany(const string& nameCompany) override;
+	void setModelProduct(const string& model) override;
+	void generateNumberProduct() override;
 	void setChargingTablet(const string& connect);
 	void setPriceTablet(const string& priceTablet);
 	void setColorTablet(const string& colorTablet);
@@ -16,8 +18,10 @@ public:
 private:
 	ofstream outData;
 	string nameCompany;
+	string model;
 	string charging;
 	string price;
 	string colorTablet;
 	size_t tabletCounter;
+	vector<int> num;
 };

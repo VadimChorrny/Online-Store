@@ -11,8 +11,13 @@ void Tablet::input()
 
 	cout << "Enter name company:\t";
 	cin >> nameCompany;
-	setNameTablet(nameCompany);
+	setNameCompany(nameCompany);
 	outData << nameCompany << endl;
+
+	cout << "Enter model tablet:\t";
+	cin >> model;
+	setModelProduct(model);
+	outData << model << endl;
 
 	cout << "Enter charging tablet:\t";
 	cin >> charging;
@@ -32,12 +37,33 @@ void Tablet::input()
 	printTablet();
 }
 
-void Tablet::setNameTablet(const string& nameCompanyTablet)
+void Tablet::setNameCompany(const string& nameCompanyTablet)
 {
 	if (!nameCompanyTablet.empty())
 		this->nameCompany = nameCompanyTablet;
 	else
 		cerr << "Error with name company tablet" << endl;
+}
+
+void Tablet::setModelProduct(const string& model)
+{
+	if (!model.empty())
+		this->model = model;
+	else
+		cerr << "Error with tablet!" << endl;
+}
+
+void Tablet::generateNumberProduct()
+{
+	int b = 10;
+	cout << "Product number:\t";
+	for (int a = 0; a <= b; a++)
+	{
+		int jmax = rand() % 10;
+		num.push_back(jmax);
+		cout << num[a];
+	}
+	cout << endl;
 }
 
 void Tablet::setChargingTablet(const string& connect)
@@ -73,6 +99,8 @@ void Tablet::printTablet() const
 	cout << "Color tablet:\t" << colorTablet << endl;
 	cout << "Price tablet:\t" << price << "$" << endl;
 	cout << "Quantity tablet:\t" << tabletCounter << "pieces" << endl;
+	Tablet tab;
+	tab.generateNumberProduct();
 	cout << "~~~~~~~~~~~~~~~~~~~~" << endl;
 	system("pause");
 	system("cls");

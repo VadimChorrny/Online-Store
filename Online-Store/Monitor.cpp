@@ -7,6 +7,16 @@ void Monitor::input()
 	cout << "~~~~~WORKED MONITOR~~~~~" << endl;
 	++monitorCounter;
 
+	cout << "Enter name company monitor:\t";
+	cin >> name;
+	setNameCompany(name);
+	outData << name << endl;
+
+	cout << "Enter model monitor:\t";
+	cin >> model;
+	setModelProduct(model);
+	outData << model << endl;
+
 	cout << "Enter type monitor:\t";
 	cin >> typeMonitor;
 	setTypeMonitor(typeMonitor);
@@ -38,6 +48,35 @@ void Monitor::setNameCompany(const string& nameCompany)
 		this->name = nameCompany;
 	else
 		cerr << "Error with name company monitor" << endl;
+}
+
+void Monitor::setModelProduct(const string& model)
+{
+	if (!model.empty())
+		this->model = model;
+	else
+		cerr << "Error with model monitor!" << endl;
+}
+
+void Monitor::generateNumberProduct()
+{
+	vector<int> s;
+	srand(time(NULL));
+
+	int b = 10;
+	system("cls");
+	cout << "___________________GENERATE SECURITY CODE__________________" << endl;
+	cout << "YOUR CODE IS ===>:\t";
+	for (int a = 0; a <= b; a++)
+	{
+		int jmax = rand() % 10;
+		s.push_back(jmax);
+		cout << s[a];
+	}
+	cout << endl;
+	cout << "___________________________________________________________" << endl;
+	system("pause");
+	system("cls");
 }
 
 void Monitor::setTypeMonitor(const string& typeMonitor)
@@ -81,6 +120,9 @@ void Monitor::printMonitor() const
 	cout << "Type matrix:\t" << typeMatrix << endl;
 	cout << "Length monitor:\t" << lengthMonitor << "dm" << endl;
 	cout << "Price:\t" << priceMonitor << "$" << endl;
+	Monitor mon;
+	mon.generateNumberProduct();
+	cout << "~~~~~~~~~~~~~~~" << endl;
 	system("pause");
 	system("cls");
 }

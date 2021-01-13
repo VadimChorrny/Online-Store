@@ -5,6 +5,7 @@
 #include <vector>
 #include <algorithm>
 #include <fstream>
+#include <ctime>
 
 using namespace std;
 
@@ -20,14 +21,13 @@ struct Product
 class addProduct
 {
 public:
-
 	addProduct();
 	~addProduct();
-
 	void input();
 	void print() const;
 	virtual void setNameCompany(const string& nameCompany);
-	void generateSpecCode();
+	virtual void setModelProduct(const string& model);
+	virtual void generateNumberProduct();
 
 private:
 	Product product;

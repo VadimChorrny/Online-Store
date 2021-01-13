@@ -6,6 +6,8 @@ class Monitor :
 public:
 	void input();
 	void setNameCompany(const string& nameCompany) override;
+	void setModelProduct(const string& model) override;
+	void generateNumberProduct() override;
 	void setTypeMonitor(const string& typeMonitor);
 	void setLengthMonitor(const size_t& lengthMonitor);
 	void setTypeMatrix(const string& typeMatrix);
@@ -19,6 +21,9 @@ private:
 	size_t priceMonitor;
 	size_t monitorCounter;
 	ofstream outData;
+	string model;
+	vector<int>num;
+
 
 };
 

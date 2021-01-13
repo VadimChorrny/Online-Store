@@ -6,6 +6,15 @@ void Mouse::input()
 	outData.open("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Mouse.csv", ios::app);
 	cout << "~~~WORKED MOUSE~~~" << endl;
 	++mouseCounter;
+	cout << "Enter name company:\t";
+	cin >> name;
+	setNameCompany(name);
+	outData << name << endl;
+
+	cout << "Enter model mouse:\t";
+	cin >> model;
+	setModelProduct(model);
+	outData << model << endl;
 
 	cout << "Enter type mouse:\t";
 	cin >> typeMouse;
@@ -41,6 +50,29 @@ void Mouse::setNameCompany(const string& nameCompany)
 		this->name = nameCompany;
 	else
 		cerr << "Error with name company mouse" << endl;
+}
+
+void Mouse::setModelProduct(const string& model)
+{
+	if (!model.empty())
+		this->model = model;
+	else
+		cerr << "Error with model mouse" << endl;
+}
+
+void Mouse::generateNumberProduct()
+{
+	srand(time(NULL));
+
+	int b = 10;
+	cout << "Product number:\t";
+	for (int a = 0; a <= b; a++)
+	{
+		int jmax = rand() % 10;
+		num.push_back(jmax);
+		cout << num[a];
+	}
+	cout << endl;
 }
 
 void Mouse::setTypeMouse(const string& typeMouse)
@@ -94,6 +126,8 @@ void Mouse::printMouse() const
 	cout << "Color mouse:\t" << color << endl;
 	cout << "Max click:\t" << MAX_CLICK << endl;
 	cout << "Mouse price:\t" << price << "$" << endl;
+	Mouse mouse;
+	mouse.generateNumberProduct();
 	cout << "~~~~~~~~~~~~~~~~~~~" << endl;
 	system("pause");
 	system("cls");
