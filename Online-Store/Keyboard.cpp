@@ -17,6 +17,11 @@ void Keyboard::input()
 	setModelProduct(model);
 	outData << model << endl;
 
+	cout << "Enter date manufacture product:\t";
+	cin >> date;
+	setYearManufacture(date);
+	outData << date << endl;
+
 	cout << "Enter type keyboard:\t";
 	cin >> typeKeyboard;
 	setTypeKeyboard(typeKeyboard);
@@ -69,6 +74,14 @@ void Keyboard::setModelProduct(const string& model)
 		this->model = model;
 	else
 		cerr << "Error with model keyboard" << endl;
+}
+
+void Keyboard::setYearManufacture(const string& date)
+{
+	if (!date.empty())
+		this->date = date;
+	else
+		cerr << "Error with date!" << endl;
 }
 
 void Keyboard::generateNumberProduct()

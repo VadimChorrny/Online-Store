@@ -9,6 +9,8 @@ public:
 	void input();
 	void setNameCompany(const string& nameCompany);
 	void generateNumberProduct() override;
+	void setYearManufacture(const string& date) override;
+	void setModelProduct(const string& model) override;
 	void setChargingLaptop(const string& connect);
 	void setPriceLaptop(const string& priceLaptop);
 	void setColorLaptop(const string& colorLaptop);
@@ -19,6 +21,7 @@ private:
 	string nameCompany;
 	string charging;
 	string model;
+	string date;
 	string price;
 	string colorLaptop;
 	size_t laptopCounter;

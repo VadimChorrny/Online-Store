@@ -16,6 +16,11 @@ void Mouse::input()
 	setModelProduct(model);
 	outData << model << endl;
 
+	cout << "Enter year manufacture product:\t";
+	cin >> date;
+	setYearManufacture(date);
+	outData << date << endl;
+
 	cout << "Enter type mouse:\t";
 	cin >> typeMouse;
 	setTypeMouse(typeMouse);
@@ -58,6 +63,14 @@ void Mouse::setModelProduct(const string& model)
 		this->model = model;
 	else
 		cerr << "Error with model mouse" << endl;
+}
+
+void Mouse::setYearManufacture(const string& date)
+{
+	if (!date.empty())
+		this->date = date;
+	else
+		cerr << "Error with date mouse!" << endl;
 }
 
 void Mouse::generateNumberProduct()

@@ -17,6 +17,12 @@ void Monitor::input()
 	setModelProduct(model);
 	outData << model << endl;
 
+	cout << "Enter year manufacture product:\t";
+	cin >> date;
+	setYearManufacture(date);
+	outData << date << endl;
+
+
 	cout << "Enter type monitor:\t";
 	cin >> typeMonitor;
 	setTypeMonitor(typeMonitor);
@@ -56,6 +62,14 @@ void Monitor::setModelProduct(const string& model)
 		this->model = model;
 	else
 		cerr << "Error with model monitor!" << endl;
+}
+
+void Monitor::setYearManufacture(const string& date)
+{
+	if (!date.empty())
+		this->date = date;
+	else
+		cerr << "Error with date!" << endl;
 }
 
 void Monitor::generateNumberProduct()

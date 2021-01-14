@@ -7,6 +7,7 @@ public:
 	void input();
 	void setNameCompany(const string& nameCompany) override;
 	void setModelProduct(const string& model) override;
+	void setYearManufacture(const string& date) override;
 	void generateNumberProduct() override;
 	void setTypeMonitor(const string& typeMonitor);
 	void setLengthMonitor(const size_t& lengthMonitor);
@@ -22,6 +23,7 @@ private:
 	size_t monitorCounter;
 	ofstream outData;
 	string model;
+	string date;
 	vector<int>num;
 
 

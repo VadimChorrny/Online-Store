@@ -12,6 +12,16 @@ void Laptop::input()
 	setNameCompany(nameCompany);
 	outData << nameCompany << endl;
 
+	cout << "Enter model laptop:\t";
+	cin >> model;
+	setYearManufacture(model);
+	outData << model << endl;
+
+	cout << "Enter year manufacture product:\t";
+	cin >> date;
+	setYearManufacture(date);
+	outData << date << endl;
+
 	cout << "Enter charging Laptop:\t";
 	cin >> charging;
 	setChargingLaptop(charging);
@@ -49,6 +59,22 @@ void Laptop::generateNumberProduct()
 		cout << num[a];
 	}
 	cout << endl;
+}
+
+void Laptop::setYearManufacture(const string& date)
+{
+	if (!date.empty())
+		this->date = date;
+	else
+		cerr << "Error with date laptop!" << endl;
+}
+
+void Laptop::setModelProduct(const string& model)
+{
+	if (!model.empty())
+		this->model = model;
+	else
+		cerr << "Error with model laptop!" << endl;
 }
 
 void Laptop::setChargingLaptop(const string& connect)

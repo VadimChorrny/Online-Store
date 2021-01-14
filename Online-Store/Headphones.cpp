@@ -12,6 +12,16 @@ void HeadPhones::input()
 	setNameCompany(nameCompany);
 	outData << nameCompany << endl;
 
+	cout << "Enter model headphones:\t";
+	cin >> model;
+	setModelProduct(model);
+	outData << model << endl;
+
+	cout << "Enter year manufacture product:\t";
+	cin >> date;
+	setYearManufacture(date);
+	outData << date << endl;
+
 	cout << "Enter connect to HeadPhones:\t";
 	cin >> connect;
 	setConnectHeadPhones(connect);
@@ -44,6 +54,14 @@ void HeadPhones::setModelProduct(const string& model)
 		this->model = model;
 	else
 		cerr << "Error with model!" << endl;
+}
+
+void HeadPhones::setYearManufacture(const string& date)
+{
+	if (!date.empty())
+		this->date = date;
+	else
+		cerr << "Error with date headphones!" << endl;
 }
 
 void HeadPhones::generateNumberProduct()

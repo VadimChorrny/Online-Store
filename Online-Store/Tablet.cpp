@@ -19,6 +19,11 @@ void Tablet::input()
 	setModelProduct(model);
 	outData << model << endl;
 
+	cout << "Enter year manufacture product:\t";
+	cin >> date;
+	setYearManufacture(date);
+	outData << date << endl;
+
 	cout << "Enter charging tablet:\t";
 	cin >> charging;
 	setChargingTablet(charging);
@@ -51,6 +56,14 @@ void Tablet::setModelProduct(const string& model)
 		this->model = model;
 	else
 		cerr << "Error with tablet!" << endl;
+}
+
+void Tablet::setYearManufacture(const string& date)
+{
+	if (!date.empty())
+		this->date = date;
+	else
+		cerr << "Error with date tablet!" << endl;
 }
 
 void Tablet::generateNumberProduct()

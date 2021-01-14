@@ -27,6 +27,7 @@ public:
 	void print() const;
 	virtual void setNameCompany(const string& nameCompany);
 	virtual void setModelProduct(const string& model);
+	virtual void setYearManufacture(const string& date);
 	virtual void generateNumberProduct();
 
 private:

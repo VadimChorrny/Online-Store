@@ -7,6 +7,7 @@ public:
 	void input();
 	void setNameCompany(const string& nameCompany) override;
 	void setModelProduct(const string& model) override;
+	void setYearManufacture(const string& date) override;
 	void generateNumberProduct() override;
 	void setChargingPhone(const string& connect);
 	void setPricePhone(const string& pricePhone);
@@ -21,7 +22,7 @@ private:
 	string colorPhone;
 	size_t phoneCounter;
 	vector<int> num;
-
+	string date;
 
 };
 

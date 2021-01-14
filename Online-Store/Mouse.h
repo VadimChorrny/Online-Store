@@ -8,6 +8,7 @@ public:
 	void input();
 	void setNameCompany(const string& nameCompany) override;
 	void setModelProduct(const string& model) override;
+	void setYearManufacture(const string& date) override;
 	void generateNumberProduct() override;
 
 	void setTypeMouse(const string& typeMouse);
@@ -28,5 +29,6 @@ private:
 	size_t MAX_CLICK;
 	size_t mouseCounter;
 	string price;
+	string date;
 };
 

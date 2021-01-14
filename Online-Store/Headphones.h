@@ -6,7 +6,8 @@ class HeadPhones :
 public:
 	void input();
 	void setNameCompany(const string& nameCompany) override;
-	void setModelProduct(const string& model);
+	void setModelProduct(const string& model) override;
+	void setYearManufacture(const string& date) override;
 	void generateNumberProduct() override;
 	void setConnectHeadPhones(const string& connect);
 	void setPriceHeadPhones(const string& priceHeadPhones);
@@ -21,5 +22,6 @@ private:
 	string colorHeadPhones;
 	size_t headphonesCounter;
 	vector<int> num;
+	string date;
 };
 

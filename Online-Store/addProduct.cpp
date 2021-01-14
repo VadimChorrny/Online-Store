@@ -83,5 +83,15 @@ void addProduct::setNameCompany(const string & nameCompany)
 	cout << "~~~~DEFAULT NO NAME COMPANY~~~~" << endl;
 }
 
+void addProduct::setModelProduct(const string& model)
+{
+	cout << "~~Default no model~~" << endl;
+}
+
+void addProduct::setYearManufacture(const string& date)
+{
+	cout << "~~Default no date manufacture~~" << endl;
+}
+
 void addProduct::generateNumberProduct()
 {}

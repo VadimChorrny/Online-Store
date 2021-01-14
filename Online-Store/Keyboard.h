@@ -9,6 +9,7 @@ public:
 	void setTypeKeyboard(const string& typeKeyboard);
 	void setNameCompany(const string& nameCompany) override;
 	void setModelProduct(const string& model) override;
+	void setYearManufacture(const string& date) override;
 	void generateNumberProduct() override;
 	void setConnectKeyboard(const string& connect);
 	void setPriceKeyboard(const string& priceKeyboard);
@@ -24,6 +25,7 @@ private:
 	string nameCompany;
 	size_t keyboardCounter;
 	string model;
+	string date;
 	
 };
 
