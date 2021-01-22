@@ -15,7 +15,6 @@ struct Product
 	string typeProduct;
 	string priceProduct;
 	string modelProduct;
-	
 };
 
 class addProduct
@@ -28,12 +27,12 @@ public:
 	virtual void setNameCompany(const string& nameCompany);
 	virtual void setModelProduct(const string& model);
 	virtual void setYearManufacture(const string& date);
+	virtual void sorting();
 	virtual void generateNumberProduct();
-
+	friend class buyProduct;
 private:
 	Product product;
 	vector<string> n;
 	ofstream outData;
-	
 };
 

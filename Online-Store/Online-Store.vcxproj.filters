@@ -45,6 +45,9 @@
     <ClCompile Include="Laptop.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="buyProduct.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="addProduct.h">
@@ -75,6 +78,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Laptop.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Menu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="buyProduct.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

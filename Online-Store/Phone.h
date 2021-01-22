@@ -9,6 +9,7 @@ public:
 	void setModelProduct(const string& model) override;
 	void setYearManufacture(const string& date) override;
 	void generateNumberProduct() override;
+	// add sorting
 	void setChargingPhone(const string& connect);
 	void setPricePhone(const string& pricePhone);
 	void setColorPhone(const string& colorMouse);

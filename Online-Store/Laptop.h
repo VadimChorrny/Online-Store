@@ -9,6 +9,7 @@ public:
 	void input();
 	void setNameCompany(const string& nameCompany);
 	void generateNumberProduct() override;
+	// add sorting
 	void setYearManufacture(const string& date) override;
 	void setModelProduct(const string& model) override;
 	void setChargingLaptop(const string& connect);

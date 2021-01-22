@@ -10,7 +10,7 @@ public:
 	void setModelProduct(const string& model) override;
 	void setYearManufacture(const string& date) override;
 	void generateNumberProduct() override;
-
+	//add sorting
 	void setTypeMouse(const string& typeMouse);
 	void setConnectMouse(const string& connect);
 	void setMaxClickMouse(const size_t& MAX_CLICKED);

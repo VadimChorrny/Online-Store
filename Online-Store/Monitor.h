@@ -9,6 +9,7 @@ public:
 	void setModelProduct(const string& model) override;
 	void setYearManufacture(const string& date) override;
 	void generateNumberProduct() override;
+	// add sorting
 	void setTypeMonitor(const string& typeMonitor);
 	void setLengthMonitor(const size_t& lengthMonitor);
 	void setTypeMatrix(const string& typeMatrix);

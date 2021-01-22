@@ -93,5 +93,13 @@ void addProduct::setYearManufacture(const string& date)
 	cout << "~~Default no date manufacture~~" << endl;
 }
 
+void addProduct::sorting()
+{
+	system("cls");
+	cout << "~~WORKED DEFAULT SORTING~~" << endl;
+	system("pause");
+	system("cls");
+}
+
 void addProduct::generateNumberProduct()
 {}

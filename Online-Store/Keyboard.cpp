@@ -102,6 +102,35 @@ void Keyboard::generateNumberProduct()
 	cout << endl;
 }
 
+void Keyboard::sorting()
+{
+	string nameFile = "C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Keyboard.csv";
+	vector<string> buff;
+	{
+
+		string line;
+		ifstream file(nameFile);
+		while (getline(file, line)) {
+			buff.push_back(line);
+			if (line == "exit") {
+				system("cls");
+			}
+		}
+
+
+	}
+	sort(buff.begin(), buff.end());
+	{
+		ofstream file(nameFile, ios::out | ios::trunc);
+		for (auto& str : buff)
+			file << str << endl;
+		cout << "File was sorted!" << endl;
+		cout << "Enter 'exit' for exit apps" << endl;
+
+	}
+	
+}
+
 void Keyboard::setConnectKeyboard(const string& connect)
 {
 	if (!connect.empty())

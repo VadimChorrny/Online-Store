@@ -140,6 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="addProduct.cpp" />
+    <ClCompile Include="buyProduct.cpp" />
     <ClCompile Include="DeleteProduct.cpp" />
     <ClCompile Include="Headphones.cpp" />
     <ClCompile Include="Keyboard.cpp" />
@@ -152,11 +153,13 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="addProduct.h" />
+    <ClInclude Include="buyProduct.h" />
     <ClInclude Include="DeleteProduct.h" />
     <ClInclude Include="Headphones.h" />
     <ClInclude Include="Keyboard.h" />
     <ClInclude Include="Laptop.h" />
     <ClInclude Include="Lib.h" />
+    <ClInclude Include="Menu.h" />
     <ClInclude Include="Monitor.h" />
     <ClInclude Include="Mouse.h" />
     <ClInclude Include="Phone.h" />
