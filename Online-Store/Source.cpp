@@ -16,7 +16,9 @@ void add()
 		cout << "|------------------------|" << endl;
 		cout << "| 2. Generate code       |" << endl;
 		cout << "|------------------------|" << endl;
-		cout << "| 3.       EXIT          |" << endl;
+		cout << "| 3. Show products       |" << endl;
+		cout << "|------------------------|" << endl;
+		cout << "| 4.       EXIT          |" << endl;
 		cout << "|------------------------|" << endl;
 		cout << "Enter action ->\t";
 		cin >> action;
@@ -33,10 +35,14 @@ void add()
 		}break;
 		case 3:
 		{
+			d.showAllProducts();
+		}break;
+		case 4:
+		{
 			system("cls");
 		}break;
 		}
-	} while (action != 3);
+	} while (action != 4);
 
 }
 

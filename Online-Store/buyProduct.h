@@ -14,4 +14,3 @@ private:
 	Product product;
 	vector<string> basket;
 };
-

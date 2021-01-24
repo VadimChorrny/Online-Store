@@ -24,6 +24,7 @@ public:
 	~addProduct();
 	void input();
 	void print() const;
+	void showAllProducts();
 	virtual void setNameCompany(const string& nameCompany);
 	virtual void setModelProduct(const string& model);
 	virtual void setYearManufacture(const string& date);
