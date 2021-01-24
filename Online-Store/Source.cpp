@@ -18,7 +18,9 @@ void add()
 		cout << "|------------------------|" << endl;
 		cout << "| 3. Show products       |" << endl;
 		cout << "|------------------------|" << endl;
-		cout << "| 4.       EXIT          |" << endl;
+		cout << "| 4. Sorting             |" << endl;
+		cout << "|------------------------|" << endl;
+		cout << "| 5.       EXIT          |" << endl;
 		cout << "|------------------------|" << endl;
 		cout << "Enter action ->\t";
 		cin >> action;
@@ -39,10 +41,14 @@ void add()
 		}break;
 		case 4:
 		{
+			d.sorting();
+		}break;
+		case 5:
+		{
 			system("cls");
 		}break;
 		}
-	} while (action != 4);
+	} while (action != 5);
 
 }
 

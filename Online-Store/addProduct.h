@@ -25,10 +25,11 @@ public:
 	void input();
 	void print() const;
 	void showAllProducts();
+	void sorting();
+
 	virtual void setNameCompany(const string& nameCompany);
 	virtual void setModelProduct(const string& model);
 	virtual void setYearManufacture(const string& date);
-	virtual void sorting();
 	virtual void generateNumberProduct();
 	friend class buyProduct;
 private:

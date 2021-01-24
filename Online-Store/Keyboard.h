@@ -11,7 +11,6 @@ public:
 	void setModelProduct(const string& model) override;
 	void setYearManufacture(const string& date) override;
 	void generateNumberProduct() override;
-	void sorting() override;
 	
 	void setConnectKeyboard(const string& connect);
 	void setPriceKeyboard(const string& priceKeyboard);

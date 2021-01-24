@@ -206,9 +206,201 @@ void addProduct::setYearManufacture(const string& date)
 void addProduct::sorting()
 {
 	system("cls");
-	cout << "~~WORKED DEFAULT SORTING~~" << endl;
-	system("pause");
-	system("cls");
+	string answer;
+	cout << "Enter type product that her sorting : ";
+	cin >> answer;
+	if (answer == "Keyboard" || answer == "keyboard")
+	{
+		string nameFile = "C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Keyboard.csv";
+		vector<string> buff;
+		{
+
+			string line;
+			ifstream file(nameFile);
+			while (getline(file, line)) {
+				buff.push_back(line);
+				if (line == "exit") {
+					system("cls");
+				}
+			}
+
+
+		}
+		sort(buff.begin(), buff.end());
+		{
+			ofstream file(nameFile, ios::out | ios::trunc);
+			for (auto& str : buff)
+				file << str << endl;
+			cout << "File was sorted!" << endl;
+			cout << "Enter 'exit' for exit apps" << endl;
+
+		}
+	}
+	else if (answer == "Mouse" || answer == "mouse")
+	{
+		string nameFile = "C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Mouse.csv";
+		vector<string> buff;
+		{
+
+			string line;
+			ifstream file(nameFile);
+			while (getline(file, line)) {
+				buff.push_back(line);
+				if (line == "exit") {
+					system("cls");
+				}
+			}
+
+
+		}
+		sort(buff.begin(), buff.end());
+		{
+			ofstream file(nameFile, ios::out | ios::trunc);
+			for (auto& str : buff)
+				file << str << endl;
+			cout << "File was sorted!" << endl;
+			cout << "Enter 'exit' for exit apps" << endl;
+
+		}
+	}
+	else if (answer == "Monitor" || answer == "monitor")
+	{
+		string nameFile = "C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Monitor.csv";
+		vector<string> buff;
+		{
+
+			string line;
+			ifstream file(nameFile);
+			while (getline(file, line)) {
+				buff.push_back(line);
+				if (line == "exit") {
+					system("cls");
+				}
+			}
+
+
+		}
+		sort(buff.begin(), buff.end());
+		{
+			ofstream file(nameFile, ios::out | ios::trunc);
+			for (auto& str : buff)
+				file << str << endl;
+			cout << "File was sorted!" << endl;
+			cout << "Enter 'exit' for exit apps" << endl;
+
+		}
+	}
+	else if (answer == "Phone" || answer == "phone")
+	{
+		string nameFile = "C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Phone.csv";
+		vector<string> buff;
+		{
+
+			string line;
+			ifstream file(nameFile);
+			while (getline(file, line)) {
+				buff.push_back(line);
+				if (line == "exit") {
+					system("cls");
+				}
+			}
+
+
+		}
+		sort(buff.begin(), buff.end());
+		{
+			ofstream file(nameFile, ios::out | ios::trunc);
+			for (auto& str : buff)
+				file << str << endl;
+			cout << "File was sorted!" << endl;
+			cout << "Enter 'exit' for exit apps" << endl;
+
+		}
+	}
+	else if (answer == "Tablet" || answer == "tablet")
+	{
+	string nameFile = "C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Tablet.csv";
+	vector<string> buff;
+	{
+
+		string line;
+		ifstream file(nameFile);
+		while (getline(file, line)) {
+			buff.push_back(line);
+			if (line == "exit") {
+				system("cls");
+			}
+		}
+
+
+	}
+	sort(buff.begin(), buff.end());
+	{
+		ofstream file(nameFile, ios::out | ios::trunc);
+		for (auto& str : buff)
+			file << str << endl;
+		cout << "File was sorted!" << endl;
+		cout << "Enter 'exit' for exit apps" << endl;
+
+	}
+	}
+	else if (answer == "Laptop" || answer == "laptop")
+	{
+	string nameFile = "C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Laptop.csv";
+	vector<string> buff;
+	{
+
+		string line;
+		ifstream file(nameFile);
+		while (getline(file, line)) {
+			buff.push_back(line);
+			if (line == "exit") {
+				system("cls");
+			}
+		}
+
+
+	}
+	sort(buff.begin(), buff.end());
+	{
+		ofstream file(nameFile, ios::out | ios::trunc);
+		for (auto& str : buff)
+			file << str << endl;
+		cout << "File was sorted!" << endl;
+		cout << "Enter 'exit' for exit apps" << endl;
+
+	}
+	}
+	else if (answer == "Headphones" || answer == "headphones")
+	{
+	string nameFile = "C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Headphones.csv";
+	vector<string> buff;
+	{
+
+		string line;
+		ifstream file(nameFile);
+		while (getline(file, line)) {
+			buff.push_back(line);
+			if (line == "exit") {
+				system("cls");
+			}
+		}
+
+
+	}
+	sort(buff.begin(), buff.end());
+	{
+		ofstream file(nameFile, ios::out | ios::trunc);
+		for (auto& str : buff)
+			file << str << endl;
+		cout << "File was sorted!" << endl;
+		cout << "Enter 'exit' for exit apps" << endl;
+
+	}
+	}
+	else cout << "Error with type products!" << endl;
+	
+
 }
 
 void addProduct::generateNumberProduct()
