@@ -26,7 +26,8 @@ public:
 	void print() const;
 	void showAllProducts();
 	void sorting();
-
+	void deleteProduct();
+	void deleteFileWithProduct();
 	virtual void setNameCompany(const string& nameCompany);
 	virtual void setModelProduct(const string& model);
 	virtual void setYearManufacture(const string& date);

@@ -14,13 +14,17 @@ void add()
 		cout << "|------------------------|" << endl;
 		cout << "| 1. ADD PRODUCT IN DB   |" << endl;
 		cout << "|------------------------|" << endl;
-		cout << "| 2. Generate code       |" << endl;
+		cout << "| 2. Delete product      |" << endl;
 		cout << "|------------------------|" << endl;
-		cout << "| 3. Show products       |" << endl;
+		cout << "| 3. Generate code       |" << endl;
 		cout << "|------------------------|" << endl;
-		cout << "| 4. Sorting             |" << endl;
+		cout << "| 4. Show products       |" << endl;
 		cout << "|------------------------|" << endl;
-		cout << "| 5.       EXIT          |" << endl;
+		cout << "| 5. Sorting             |" << endl;
+		cout << "|------------------------|" << endl;
+		cout << "| 6. Delete file         |" << endl;
+		cout << "|------------------------|" << endl;
+		cout << "| 7.       EXIT          |" << endl;
 		cout << "|------------------------|" << endl;
 		cout << "Enter action ->\t";
 		cin >> action;
@@ -33,17 +37,26 @@ void add()
 		}break;
 		case 2:
 		{
-			d.generateNumberProduct();
-		}break;
+			system("cls");
+			d.deleteProduct();
+		}
 		case 3:
 		{
-			d.showAllProducts();
+			d.generateNumberProduct();
 		}break;
 		case 4:
 		{
-			d.sorting();
+			d.showAllProducts();
 		}break;
 		case 5:
+		{
+			d.sorting();
+		}break;
+		case 6:
+		{
+			d.deleteFileWithProduct();
+		}break;
+		case 7:
 		{
 			system("cls");
 		}break;
