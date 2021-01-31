@@ -43,6 +43,7 @@ void Keyboard::input()
 	setPriceKeyboard(price);
 	outData << price << endl;
 
+
 	cout << "~~~~~~~~~~~~~~~~~~~~~" << endl;
 	printKeyboard();
 }

@@ -19,7 +19,7 @@ public:
 private:
 	ofstream outData;
 	vector<int> num;
-	//vector<string> keyboard;
+	vector<string> keyboard_;
 	string typeKeyboard;
 	string connect;
 	string price;

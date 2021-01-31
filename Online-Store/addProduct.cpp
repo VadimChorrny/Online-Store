@@ -184,6 +184,20 @@ void addProduct::showAllProducts()
 		}
 		myfile.close();
 	}
+	else if (prod == "Test" || prod == "test")
+	{
+	string line;
+	ifstream myfile("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Test.csv");
+	if (myfile.is_open())
+	{
+		while (!myfile.eof())
+		{
+			getline(myfile, line);
+			cout << line << endl;
+		}
+	}
+	myfile.close();
+	}
 	else cout << "Unable to open file";
 	system("pause");
 	system("cls");
@@ -401,10 +415,21 @@ void addProduct::deleteProduct()
 {
 	// !!!CHANGE!!!
 	// it's function delete all...
-	ofstream f("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Phone.csv");
-	f.open("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Phone.csv", ofstream::binary | ofstream::out | ofstream::in);
+	/*CLEEN;
+	cout << " Was deleted " << endl;
+	ofstream f("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Test.csv");
+	f.open("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Test.csv", ofstream::binary | ofstream::out | ofstream::in);
 	f.seekp(1);
-	f.close();
+	f.close();*/
+
+	ifstream fileIn("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Test.csv");              
+	string contents;
+	fileIn >> contents;                              
+	fileIn.close();
+	contents.pop_back();                             
+	ofstream fileOut("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Test.csv", std::ios::trunc); 
+	fileOut << contents;                             
+	fileOut.close();
 
 	// delete file
 	//remove("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Phone.csv");

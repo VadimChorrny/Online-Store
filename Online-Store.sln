@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Online-Store", "Online-Stor
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Connect_DB", "Connect_DB\Connect_DB.vcxproj", "{997A89D9-D83C-4464-8070-6FD7D8542171}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TESTING", "TESTING\TESTING.vcxproj", "{903385B5-5D9F-4773-92B0-6EE1BEEACAD2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,6 +33,14 @@ Global
 		{997A89D9-D83C-4464-8070-6FD7D8542171}.Release|x64.Build.0 = Release|x64
 		{997A89D9-D83C-4464-8070-6FD7D8542171}.Release|x86.ActiveCfg = Release|Win32
 		{997A89D9-D83C-4464-8070-6FD7D8542171}.Release|x86.Build.0 = Release|Win32
+		{903385B5-5D9F-4773-92B0-6EE1BEEACAD2}.Debug|x64.ActiveCfg = Debug|x64
+		{903385B5-5D9F-4773-92B0-6EE1BEEACAD2}.Debug|x64.Build.0 = Debug|x64
+		{903385B5-5D9F-4773-92B0-6EE1BEEACAD2}.Debug|x86.ActiveCfg = Debug|Win32
+		{903385B5-5D9F-4773-92B0-6EE1BEEACAD2}.Debug|x86.Build.0 = Debug|Win32
+		{903385B5-5D9F-4773-92B0-6EE1BEEACAD2}.Release|x64.ActiveCfg = Release|x64
+		{903385B5-5D9F-4773-92B0-6EE1BEEACAD2}.Release|x64.Build.0 = Release|x64
+		{903385B5-5D9F-4773-92B0-6EE1BEEACAD2}.Release|x86.ActiveCfg = Release|Win32
+		{903385B5-5D9F-4773-92B0-6EE1BEEACAD2}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
