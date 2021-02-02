@@ -10,11 +10,9 @@ int main()
 	cout << "1.  ADMIN   " << endl;
 	cout << "2.  USER    " << endl;
 	cout << "============" << endl;
-
  	cout << "Enter variant login : "; cin >> action;
-	system("cls");
-
-	if (action == "Admin" || action == "admin")
+	CLEEN;
+	if (action == "Admin" || action == "admin" || action == "1")
 	{
 		CLEEN;
 		// add hard system
@@ -34,7 +32,7 @@ int main()
 			ERROR;
 	}
 		
-	else if (action == "User" || action == "user")
+	else if (action == "User" || action == "user" || action == "2")
 		UserMenu();
 	else
 		cerr << "Error with login!!!" << endl;

@@ -11,7 +11,6 @@ public:
 	void setModelProduct(const string& model) override;
 	void setYearManufacture(const string& date) override;
 	void generateNumberProduct() override;
-	
 	void setConnectKeyboard(const string& connect);
 	void setPriceKeyboard(const string& priceKeyboard);
 	void setColorKeyboard(const string& colorKeyboard);
@@ -28,8 +27,5 @@ private:
 	size_t keyboardCounter;
 	string model;
 	string date;
-
-	// maybe add vector for every details
-	
 };
 

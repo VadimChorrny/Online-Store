@@ -3,14 +3,19 @@
 void Keyboard::input()
 {
 	system("cls");
+	cout << "~~~WORKED KEYBOARD~~~" << endl;
+	
 	outData.open("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Keyboard.csv", ios::app);
 	++keyboardCounter;
-	cout << "~~~WORKED KEYBOARD~~~" << endl;
 
 	cout << "Enter name company keyboard:\t";
 	cin >> nameCompany;
 	setNameCompany(nameCompany);
+	string line = "--------------------";
+	outData << line << endl;
 	outData << nameCompany << endl;
+	outData << line << endl;
+
 
 	cout << "Enter model keyboard:\t";
 	cin >> model;
@@ -37,15 +42,15 @@ void Keyboard::input()
 	setColorKeyboard(colorKeyboard);
 	outData << colorKeyboard << endl;
 
-
 	cout << "Enter price keyboard:\t";
 	cin >> price;
 	setPriceKeyboard(price);
 	outData << price << endl;
 
-
 	cout << "~~~~~~~~~~~~~~~~~~~~~" << endl;
 	printKeyboard();
+
+	
 }
 
 
@@ -143,4 +148,5 @@ void Keyboard::printKeyboard() const
 	/*cout << "Quantity keyboard:\t" << keyboardCounter << "pieces" << endl;*/
 	cout << "~~~~~~~~~~~~~~~~~~~~" << endl;
 	system("pause");
+	CLEEN;
 }

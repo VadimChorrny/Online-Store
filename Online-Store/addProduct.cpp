@@ -62,8 +62,14 @@ void addProduct::input()
 		string	test;
 		cout << "Enter test : ";
 		cin >> test;
+		string  line = "------------------";
+		
 		outData.open("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Test.csv", ios::app);
+		
+		outData << line << endl;
 		outData << test << endl;
+		outData << line << endl;
+
 	}
 	else 
 	{
@@ -415,21 +421,70 @@ void addProduct::deleteProduct()
 {
 	// !!!CHANGE!!!
 	// it's function delete all...
-	/*CLEEN;
-	cout << " Was deleted " << endl;
-	ofstream f("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Test.csv");
-	f.open("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Test.csv", ofstream::binary | ofstream::out | ofstream::in);
-	f.seekp(1);
-	f.close();*/
-
-	ifstream fileIn("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Test.csv");              
-	string contents;
-	fileIn >> contents;                              
-	fileIn.close();
-	contents.pop_back();                             
-	ofstream fileOut("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Test.csv", std::ios::trunc); 
-	fileOut << contents;                             
-	fileOut.close();
+	string answer;
+	CLEEN;
+	cout << "~~~~DELETE PRODUCT~~~~" << endl;
+	cout << "Enter type product for delete : ";
+	cin >> answer;
+	if (answer == "Keyboard" || answer == "keyboard")
+	{
+		ofstream f("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Keyboard.csv");
+		f.open("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Keyboard.csv", ofstream::binary | ofstream::out | ofstream::in);
+		f.seekp(1);
+		f.close();
+	}
+	else if (answer == "Mouse" || answer == "mouse")
+	{
+		ofstream f("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Mouse.csv");
+		f.open("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Mouse.csv", ofstream::binary | ofstream::out | ofstream::in);
+		f.seekp(1);
+		f.close();
+	}
+	else if (answer == "Monitor" || answer == "monitor")
+	{
+		ofstream f("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Monitor.csv");
+		f.open("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Monitor.csv", ofstream::binary | ofstream::out | ofstream::in);
+		f.seekp(1);
+		f.close();
+	}
+	else if (answer == "Phone" || answer == "phone")
+	{
+		ofstream f("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Phone.csv");
+		f.open("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Phone.csv", ofstream::binary | ofstream::out | ofstream::in);
+		f.seekp(1);
+		f.close();
+	}
+	else if (answer == "Tablet" || answer == "tablet")
+	{
+		ofstream f("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Tablet.csv");
+		f.open("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Tablet.csv", ofstream::binary | ofstream::out | ofstream::in);
+		f.seekp(1);
+		f.close();
+	}
+	else if (answer == "Laptop" || answer == "laptop")
+	{
+		ofstream f("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Laptop.csv");
+		f.open("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Laptop.csv", ofstream::binary | ofstream::out | ofstream::in);
+		f.seekp(1);
+		f.close();
+	}
+	else if (answer == "Headphones" || answer == "headphones")
+	{
+		ofstream f("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Headphones.csv");
+		f.open("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Headphones.csv", ofstream::binary | ofstream::out | ofstream::in);
+		f.seekp(1);
+		f.close();
+	}
+	else cerr << "Error with del!" << endl;
+	CLEEN;
+	//ifstream fileIn("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Test.csv");              
+	//string contents;
+	//fileIn >> contents;                              
+	//fileIn.close();
+	//contents.pop_back();                             
+	//ofstream fileOut("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Test.csv", std::ios::trunc); 
+	//fileOut << contents;                             
+	//fileOut.close();
 
 	// delete file
 	//remove("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Phone.csv");

@@ -3,6 +3,18 @@
 #include <string>
 
 using namespace std;
+void showVecotor(vector<string> test);
+
+void testVector()
+{
+	vector<string> s1{"one"};
+	vector<string> s2{"two"};
+	vector<string> s3{"three"};
+
+	s3.insert(s1.begin(), s2.begin(),s2.end());
+	showVecotor(s3);
+	
+}
 
 void showVecotor(vector<string> test)
 {
@@ -14,7 +26,7 @@ void showVecotor(vector<string> test)
 
 void main()
 {
-	vector<string> test{"one","two","three"};
+	/*vector<string> test{"one","two","three"};
 
 	showVecotor(test);
 	cout << "__________" << endl;
@@ -29,5 +41,8 @@ void main()
 
 	cout << "__________" << endl;
 	test.clear();
-	showVecotor(test);
+	showVecotor(test);*/
+
+
+	testVector();
 }

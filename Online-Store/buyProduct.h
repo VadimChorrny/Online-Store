@@ -7,6 +7,7 @@
 
 #define CLEEN system("cls");
 #define ERROR cerr << "error" << endl;
+
 using namespace std;
 
 class buyProduct
