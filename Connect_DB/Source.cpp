@@ -14,15 +14,13 @@ static int callback(void* NotUsed, int argc, char** argv, char** azColName);
 
 int main()
 {
-	const char* dir = "D:\\dev\\TestDB\\Students.db";
-	sqlite3* DB;
-
+	const char* dir = "C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Connect_DB\\DB\\sqlite.db";
+	sqlite3* DB = nullptr;
 	createDB(dir);
 	createTable(dir);
-	//insertData(dir);
-	deleteData(dir);
-
-	//updateData(dir);
+	insertData(dir);
+	//deleteData(dir);
+	updateData(dir);
 	selectData(dir); 
 	return 0;
 }
@@ -78,7 +76,6 @@ static int insertData(const char* s)
 	sqlite3* DB;
 	char* messageErr;
 	int exit = sqlite3_open(s,&DB);
-	
 	string sql("INSERT INTO GRADES (NAME,LNAME,AGE,ADDRESS,GRADE) VALUES('Alice','Chapa',35,'Tampa','A');"
 		"INSERT INTO GRADES (NAME,LNAME,AGE,ADDRESS,GRADE) VALUES('Vadim','Vika',14,'Tamara','B');"
 		"INSERT INTO GRADES (NAME,LNAME,AGE,ADDRESS,GRADE) VALUES('Anton','Chris',54,'Ferero','C');"

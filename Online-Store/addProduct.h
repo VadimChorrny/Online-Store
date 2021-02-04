@@ -22,21 +22,24 @@ struct Product
 class addProduct
 {
 public:
+
 	addProduct(); // don't need
 	~addProduct();// don't need
-	void input();
-	void print() const;
-	void showAllProducts();
-	void sorting();
-	void deleteProduct();
-	void deleteFileWithProduct();
+
+	void input(); // init all
+	void showAllProducts(); // show all products on monitor
+	void sorting(); // sorting products
+	void deleteProduct(); // delete products | need development
+	void deleteFileWithProduct(); // delete file
+
+	// for inheritance
+	virtual void print() const; 
 	virtual void setNameCompany(const string& nameCompany);
 	virtual void setModelProduct(const string& model);
 	virtual void setYearManufacture(const string& date);
 	virtual void generateNumberProduct();
 
-
-	// maybe future bug
+	// friend class :)
 	friend class buyProduct;
 	friend class Keyboard;
 	friend class Phone;
@@ -45,7 +48,6 @@ public:
 	friend class Tablet;
 	friend class Laptop;
 	friend class Headphones;
-
 private:
 	Product product;
 	vector<string> n;

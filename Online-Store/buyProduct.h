@@ -5,19 +5,20 @@
 #include "addProduct.h"
 #include "Keyboard.h"
 
+using namespace std;
+
+// init macros
 #define CLEEN system("cls");
 #define ERROR cerr << "error" << endl;
-
-using namespace std;
 
 class buyProduct
 {
 public:
+	friend class addProduct; // friend
+	string Remove_Line(string line, int value); // for buy product
+	buyProduct(); // ctor
+	void deleteProduct(); // func for buy product
 
-	friend class addProduct;
-	string Remove_Line(string line, int value);
-	buyProduct();
-	void deleteProduct();
 private:
 	Product product;
 	vector<string> basket;
