@@ -1,6 +1,6 @@
 #pragma once
 #include <iostream>
-#include "addProduct.h"
+#include "Product.h"
 using namespace std;
 
 class DeleteProduct
@@ -13,7 +13,7 @@ public:
 	void deleteManually(string& arg);
 private:
 	friend class addProduct;
-	Product* p;
+	Products* p;
 
 };
 

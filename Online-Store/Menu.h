@@ -1,10 +1,10 @@
 #pragma once
 #include <iostream>
 #include <string>
-#include "addProduct.h"
+#include "Product.h"
 #include "buyProduct.h"
 #include "windows.h"
-using namespace std;
+using namespace std;          
 
 // start init 
 void UserMenu();
@@ -12,7 +12,7 @@ void UserMenu();
 // for show admin menu
 void AdminMenu()
 {
-	addProduct d;
+	Product d;
 	int action = 0;
 	do
 	{
@@ -82,7 +82,7 @@ void AdminMenu()
 void UserMenu()
 {
 	buyProduct buy;
-	addProduct d;
+	Product d;
 	int action = 0;
 	do
 	{

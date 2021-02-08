@@ -1,13 +1,13 @@
 #pragma once
-#include "addProduct.h"
+#include "Product.h"
 class HeadPhones :
-	public addProduct
+	public Product
 {
 public:
 	void input();
 	void setNameCompany(const string& nameCompany) override;
 	void setModelProduct(const string& model) override;
-	void setYearManufacture(const string& date) override;
+	void setYearManufacture(const string& date) override; 
 	void generateNumberProduct() override;
 	// add sorting
 	void setConnectHeadPhones(const string& connect);

@@ -14,7 +14,9 @@ static int callback(void* NotUsed, int argc, char** argv, char** azColName);
 
 int main()
 {
-	const char* dir = "C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Connect_DB\\DB\\sqlite.db";
+
+	const char* dir = "C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Connect_DB\\DB\\sqlite.db-journal";
+
 	sqlite3* DB = nullptr;
 	createDB(dir);
 	createTable(dir);
@@ -23,8 +25,8 @@ int main()
 	updateData(dir);
 	selectData(dir); 
 	return 0;
-}
 
+}
 
 static int createDB(const char* s)
 {
@@ -46,8 +48,6 @@ static int createTable(const char* s)
 		"AGE		INT  NOT NULL, "
 		"ADDRESS	CHAR(50), "
 		"GRADE		CHAR(1) );";
-
-
 	try
 	{
 		int exit = 0;

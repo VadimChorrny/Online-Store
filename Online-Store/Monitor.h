@@ -1,7 +1,7 @@
 #pragma once
-#include "addProduct.h"
+#include "Product.h"
 class Monitor :
-    public addProduct
+    public Product
 {
 public:
 	void input();

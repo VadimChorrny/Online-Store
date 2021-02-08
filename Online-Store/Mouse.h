@@ -1,7 +1,7 @@
 #pragma once
-#include "addProduct.h"
+#include "Product.h"
 class Mouse :
-    public addProduct
+    public Product
 {
 public:
 

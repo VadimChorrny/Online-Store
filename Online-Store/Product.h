@@ -11,7 +11,7 @@ using namespace std;
 
 #define CLEEN system("cls");
 
-struct Product
+struct Products
 {
 	string nameProduct;
 	string typeProduct;
@@ -19,12 +19,12 @@ struct Product
 	string modelProduct;
 };
 
-class addProduct
+class Product
 {
 public:
 
-	addProduct(); // don't need
-	~addProduct();// don't need
+	Product(); // don't need
+	~Product();// don't need
 
 	void input(); // init all
 	void showAllProducts(); // show all products on monitor
@@ -49,7 +49,7 @@ public:
 	friend class Laptop;
 	friend class Headphones;
 private:
-	Product product;
+	Products product;
 	vector<string> n;
 	ofstream outData;
 };

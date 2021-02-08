@@ -1,8 +1,8 @@
 #pragma once
 
-#include "addProduct.h"
+#include "Product.h"
 
-class Tablet : public addProduct
+class Tablet : public Product
 {
 public:
 	

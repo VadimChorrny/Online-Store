@@ -1,6 +1,5 @@
-#include "addProduct.h"
+#include "Product.h"
 #include "Keyboard.h"
-#include "Lib.h"
 #include "Menu.h"
 
 int main()

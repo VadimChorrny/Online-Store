@@ -1,4 +1,4 @@
-#include "addProduct.h"
+#include "Product.h"
 #include "Keyboard.h"
 #include "Mouse.h"
 #include <ctime>
@@ -8,12 +8,12 @@
 #include "Headphones.h"
 #include "Laptop.h"
 
-addProduct::addProduct()
+Product::Product()
 {
 }
-addProduct::~addProduct()
+Product::~Product()
 {}
-void addProduct::input()
+void Product::input()
 {
 	cout << endl;
 	cout << "~~~~~~INPUT~~~~~~" << endl;
@@ -69,7 +69,6 @@ void addProduct::input()
 		outData << line << endl;
 		outData << test << endl;
 		outData << line << endl;
-
 	}
 	else 
 	{
@@ -79,13 +78,11 @@ void addProduct::input()
 		cout << "--------------------------------------" << endl;
 		system("pause");
 		system("cls");
-	}
-
-	
+	}	
 }
-void addProduct::print() const
+void Product::print() const
 {}
-void addProduct::showAllProducts()
+void Product::showAllProducts()
 {
 	string prod;
 	system("cls");
@@ -208,19 +205,19 @@ void addProduct::showAllProducts()
 	system("pause");
 	system("cls");
 }
-void addProduct::setNameCompany(const string & nameCompany)
+void Product::setNameCompany(const string & nameCompany)
 {
 	cout << "~~~~DEFAULT NO NAME COMPANY~~~~" << endl;
 }
-void addProduct::setModelProduct(const string& model)
+void Product::setModelProduct(const string& model)
 {
 	cout << "~~Default no model~~" << endl;
 }
-void addProduct::setYearManufacture(const string& date)
+void Product::setYearManufacture(const string& date)
 {
 	cout << "~~Default no date manufacture~~" << endl;
 }
-void addProduct::sorting()
+void Product::sorting()
 {
 	system("cls");
 	string answer;
@@ -240,8 +237,6 @@ void addProduct::sorting()
 					system("cls");
 				}
 			}
-
-
 		}
 		sort(buff.begin(), buff.end());
 		{
@@ -250,7 +245,6 @@ void addProduct::sorting()
 				file << str << endl;
 			cout << "File was sorted!" << endl;
 			cout << "Enter 'exit' for exit apps" << endl;
-
 		}
 	}
 	else if (answer == "Mouse" || answer == "mouse")
@@ -417,7 +411,7 @@ void addProduct::sorting()
 	}
 	else cout << "Error with type products!" << endl;
 }
-void addProduct::deleteProduct()
+void Product::deleteProduct()
 {
 	// !!!CHANGE!!!
 	// it's function delete all...
@@ -428,10 +422,14 @@ void addProduct::deleteProduct()
 	cin >> answer;
 	if (answer == "Keyboard" || answer == "keyboard")
 	{
-		ofstream f("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Keyboard.csv");
+		/*ofstream f("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Keyboard.csv");
 		f.open("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Keyboard.csv", ofstream::binary | ofstream::out | ofstream::in);
 		f.seekp(1);
-		f.close();
+		f.close();*/
+
+		Keyboard k;
+		k.deleteProducts();
+
 	}
 	else if (answer == "Mouse" || answer == "mouse")
 	{
@@ -491,7 +489,7 @@ void addProduct::deleteProduct()
 
 	//f.write("zxc", 3);
 }
-void addProduct::deleteFileWithProduct()
+void Product::deleteFileWithProduct()
 {
 	string file;
 	system("cls");
@@ -516,5 +514,5 @@ void addProduct::deleteFileWithProduct()
 	else
 		cerr << "error with delete file" << endl;
 }
-void addProduct::generateNumberProduct()
+void Product::generateNumberProduct()
 {}

@@ -2,7 +2,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include "addProduct.h"
+#include "Product.h"
 #include "Keyboard.h"
 
 using namespace std;
@@ -20,7 +20,7 @@ public:
 	void deleteProduct(); // func for buy product
 
 private:
-	Product product;
+	Products product;
 	vector<string> basket;
 	string action;
 	Keyboard keyboard;
