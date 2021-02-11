@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{d2c15ecc-b7fb-4d5b-9a55-8919606091e1}</ProjectGuid>
-    <RootNamespace>OnlineStore</RootNamespace>
+    <ProjectGuid>{997a89d9-d83c-4464-8070-6fd7d8542171}</ProjectGuid>
+    <RootNamespace>ConnectDB</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -139,32 +139,23 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Product.cpp" />
-    <ClCompile Include="buyProduct.cpp" />
-    <ClCompile Include="DeleteProduct.cpp" />
-    <ClCompile Include="Headphones.cpp" />
-    <ClCompile Include="Keyboard.cpp" />
-    <ClCompile Include="Laptop.cpp" />
-    <ClCompile Include="Monitor.cpp" />
-    <ClCompile Include="Mouse.cpp" />
-    <ClCompile Include="Phone.cpp" />
+    <ClCompile Include="..\..\..\..\Desktop\sqlite-amalgamation-3340100\sqlite3.c" />
     <ClCompile Include="Source.cpp" />
-    <ClCompile Include="Tablet.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Product.h" />
-    <ClInclude Include="buyProduct.h" />
-    <ClInclude Include="DeleteProduct.h" />
-    <ClInclude Include="Headphones.h" />
-    <ClInclude Include="Keyboard.h" />
-    <ClInclude Include="Laptop.h" />
-    <ClInclude Include="Menu.h" />
-    <ClInclude Include="Monitor.h" />
-    <ClInclude Include="Mouse.h" />
-    <ClInclude Include="Phone.h" />
-    <ClInclude Include="Tablet.h" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AddSkins.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
+    <Import Project="..\packages\sqlite3_c_plus_plus.1.0.3\build\native\sqlite3_c_plus_plus.targets" Condition="Exists('..\packages\sqlite3_c_plus_plus.1.0.3\build\native\sqlite3_c_plus_plus.targets')" />
   </ImportGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Данный проект ссылается на пакеты NuGet, отсутствующие на этом компьютере. Используйте восстановление пакетов NuGet, чтобы скачать их.  Дополнительную информацию см. по адресу: http://go.microsoft.com/fwlink/?LinkID=322105. Отсутствует следующий файл: {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\sqlite3_c_plus_plus.1.0.3\build\native\sqlite3_c_plus_plus.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\sqlite3_c_plus_plus.1.0.3\build\native\sqlite3_c_plus_plus.targets'))" />
+  </Target>
 </Project>
