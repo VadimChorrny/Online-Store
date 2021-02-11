@@ -25,7 +25,7 @@ void Monitor::input()
 
 	cout << "Enter price : ";
 	cin >> priceMonitor;
-	ofstream fout("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Monitor.csv", ios::out | ios::app);
+	ofstream fout("Products\\Monitor.csv", ios::out | ios::app);
 	if (fout.is_open())
 	{
 		fout << "-------" << name << "-------" << endl;
@@ -54,7 +54,7 @@ void Monitor::deleteProducts()
 	string name, s;
 	cin.ignore(32767, '\n');
 	getline(cin, name);
-	ifstream fout("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Monitor.csv");
+	ifstream fout("Products\\Monitor.csv");
 	if (fout.is_open())
 	{
 		while (getline(fout, s))
@@ -66,9 +66,9 @@ void Monitor::deleteProducts()
 	else
 		cerr << "Error: The file was not opened." << endl;
 	fout.close();
-	ofstream fsut("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Monitor.csv", std::ofstream::out | std::ofstream::trunc);
+	ofstream fsut("Products\\Monitor.csv", std::ofstream::out | std::ofstream::trunc);
 	fsut.close();
-	ofstream fomt("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Monitor.csv", ios::out | ios::app);
+	ofstream fomt("Products\\Monitor.csv", ios::out | ios::app);
 	if (fomt.is_open())
 	{
 		for (int i = 0; i < result.size(); i++)

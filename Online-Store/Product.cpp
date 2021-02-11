@@ -92,7 +92,7 @@ void Product::showAllProducts()
 	if (prod == "Keyboard" || prod == "keyboard")
 	{
 		string line;
-		ifstream myfile("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Keyboard.csv");
+		ifstream myfile("Products\\Keyboard.csv");
 		if (myfile.is_open())
 		{
 			while (!myfile.eof())
@@ -107,7 +107,7 @@ void Product::showAllProducts()
 	else if (prod == "Mouse" || prod == "mouse")
 	{
 		string line;
-		ifstream myfile("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Mouse.csv");
+		ifstream myfile("Products\\Mouse.csv");
 		if (myfile.is_open())
 		{
 			while (!myfile.eof())
@@ -121,7 +121,7 @@ void Product::showAllProducts()
 	else if (prod == "Monitor" || prod == "monitor")
 	{
 		string line;
-		ifstream myfile("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Monitor.csv");
+		ifstream myfile("Products\\Monitor.csv");
 		if (myfile.is_open())
 		{
 			while (!myfile.eof())
@@ -135,7 +135,7 @@ void Product::showAllProducts()
 	else if (prod == "Phone" || prod == "phone")
 	{
 		string line;
-		ifstream myfile("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Phone.csv");
+		ifstream myfile("Products\\Phone.csv");
 		if (myfile.is_open())
 		{
 			while (!myfile.eof())
@@ -149,7 +149,7 @@ void Product::showAllProducts()
 	else if (prod == "Tablet" || prod == "tablet")
 	{
 		string line;
-		ifstream myfile("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Tablet.csv");
+		ifstream myfile("Products\\Tablet.csv");
 		if (myfile.is_open())
 		{
 			while (!myfile.eof())
@@ -163,7 +163,7 @@ void Product::showAllProducts()
 	else if (prod == "Laptop" || prod == "laptop")
 	{
 		string line;
-		ifstream myfile("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Laptop.csv");
+		ifstream myfile("Products\\Laptop.csv");
 		if (myfile.is_open())
 		{
 			while (!myfile.eof())
@@ -177,7 +177,7 @@ void Product::showAllProducts()
 	else if (prod == "Headphones" || prod == "headphones")
 	{
 		string line;
-		ifstream myfile("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Headphones.csv");
+		ifstream myfile("Products\\Headphones.csv");
 		if (myfile.is_open())
 		{
 			while (!myfile.eof())
@@ -191,7 +191,7 @@ void Product::showAllProducts()
 	else if (prod == "Test" || prod == "test")
 	{
 	string line;
-	ifstream myfile("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Test.csv");
+	ifstream myfile("Products\\Test.csv");
 	if (myfile.is_open())
 	{
 		while (!myfile.eof())
@@ -226,7 +226,7 @@ void Product::sorting()
 	cin >> answer;
 	if (answer == "Keyboard" || answer == "keyboard")
 	{
-		string nameFile = "C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Keyboard.csv";
+		string nameFile = "Products\\Keyboard.csv";
 		vector<string> buff;
 		{
 
@@ -250,7 +250,7 @@ void Product::sorting()
 	}
 	else if (answer == "Mouse" || answer == "mouse")
 	{
-		string nameFile = "C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Mouse.csv";
+		string nameFile = "Products\\Mouse.csv";
 		vector<string> buff;
 		{
 
@@ -277,7 +277,7 @@ void Product::sorting()
 	}
 	else if (answer == "Monitor" || answer == "monitor")
 	{
-		string nameFile = "C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Monitor.csv";
+		string nameFile = "Products\\Monitor.csv";
 		vector<string> buff;
 		{
 
@@ -304,7 +304,7 @@ void Product::sorting()
 	}
 	else if (answer == "Phone" || answer == "phone")
 	{
-		string nameFile = "C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Phone.csv";
+		string nameFile = "Products\\Phone.csv";
 		vector<string> buff;
 		{
 
@@ -331,7 +331,7 @@ void Product::sorting()
 	}
 	else if (answer == "Tablet" || answer == "tablet")
 	{
-		string nameFile = "C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Tablet.csv";
+		string nameFile = "Products\\Tablet.csv";
 		vector<string> buff;
 		{
 
@@ -358,7 +358,7 @@ void Product::sorting()
 	}
 	else if (answer == "Laptop" || answer == "laptop")
 	{
-		string nameFile = "C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Laptop.csv";
+		string nameFile = "Products\\Laptop.csv";
 		vector<string> buff;
 		{
 
@@ -385,7 +385,7 @@ void Product::sorting()
 	}
 	else if (answer == "Headphones" || answer == "headphones")
 	{
-		string nameFile = "C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Headphones.csv";
+		string nameFile = "Products\\Headphones.csv";
 		vector<string> buff;
 		{
 
@@ -511,21 +511,21 @@ void Product::deleteFileWithProduct()
 	cout << "Enter name file that delete : ";
 	cin >> file;
 	if (file == "Keyboard" || file == "keyboard")
-		remove("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Keyboard.csv");
+		remove("Products\\Keyboard.csv");
 	else if (file == "Mouse" || file == "mouse")
-		remove("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Mouse.csv");
+		remove("Products\\Mouse.csv");
 	else if (file == "Monitor" || file == "monitor")
-		remove("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Monitor.csv");
+		remove("Products\\Monitor.csv");
 	else if (file == "Phone" || file == "phone")
-		remove("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Phone.csv");
+		remove("Products\\Phone.csv");
 	else if (file == "Tablet" || file == "tablet")
-		remove("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Tablet.csv");
+		remove("Products\\Tablet.csv");
 	else if (file == "Laptop" || file == "laptop")
-		remove("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Laptop.csv");
+		remove("Products\\Laptop.csv");
 	else if (file == "Headphones" || file == "headphones")
-		remove("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Phone.csv");
+		remove("Products\\Phone.csv");
 	else if (file == "Test" || file == "test")
-		remove("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Test.csv");
+		remove("Products\\Test.csv");
 	else
 		cerr << "error with delete file" << endl;
 }

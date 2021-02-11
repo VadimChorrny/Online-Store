@@ -73,7 +73,7 @@ void Keyboard::input()
 	cin >> d.colorKeyboard;
 	cout << "Enter price : ";
 	cin >> d.price;
-	ofstream fout("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Keyboard.csv", ios::out | ios::app);
+	ofstream fout("Products\\Keyboard.csv", ios::out | ios::app);
 	if (fout.is_open())
 	{
 		fout << "-------" << d.nameCompany << "-------" << endl;
@@ -96,7 +96,7 @@ void Keyboard::input()
 
 void Keyboard::save()
 {
-	ofstream outPassFile("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Keyboard.csv");
+	ofstream outPassFile("Products\\Keyboard.csv");
 	for (auto& d : data_)
 		outPassFile
 		<< d.nameCompany << ", "
@@ -186,7 +186,7 @@ void Keyboard::deleteProducts()
 	string name, s;
 	cin.ignore(32767, '\n');
 	getline(cin, name);
-	ifstream fout("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Keyboard.csv");
+	ifstream fout("Products\\Keyboard.csv");
 	if (fout.is_open())
 	{
 		while (getline(fout, s))
@@ -198,9 +198,9 @@ void Keyboard::deleteProducts()
 	else
 		cerr << "Error: The file was not opened." << endl;
 	fout.close();
-	ofstream fsut("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Keyboard.csv", std::ofstream::out | std::ofstream::trunc);
+	ofstream fsut("Products\\Keyboard.csv", std::ofstream::out | std::ofstream::trunc);
 	fsut.close();
-	ofstream fomt("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Keyboard.csv", ios::out | ios::app);
+	ofstream fomt("Products\\Keyboard.csv", ios::out | ios::app);
 	if (fomt.is_open())
 	{
 		for (int i = 0; i < result.size(); i++)
