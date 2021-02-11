@@ -7,6 +7,7 @@ class Laptop :
 {
 public:
 	void input();
+	void deleteProducts();
 	void setNameCompany(const string& nameCompany);
 	void generateNumberProduct() override;
 	// add sorting
@@ -24,6 +25,7 @@ private:
 	string model;
 	string date;
 	string price;
+	string type;
 	string colorLaptop;
 	size_t laptopCounter;
 };

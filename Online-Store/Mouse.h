@@ -6,6 +6,7 @@ class Mouse :
 public:
 
 	void input();
+	void deleteProducts();
 	void setNameCompany(const string& nameCompany) override;
 	void setModelProduct(const string& model) override;
 	void setYearManufacture(const string& date) override;

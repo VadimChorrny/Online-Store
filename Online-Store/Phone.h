@@ -5,6 +5,7 @@ class Phone :
 {
 public:
 	void input();
+	void deleteProducts();
 	void setNameCompany(const string& nameCompany) override;
 	void setModelProduct(const string& model) override;
 	void setYearManufacture(const string& date) override;
@@ -20,6 +21,7 @@ private:
 	string model;
 	string charging;
 	string price;
+	string type;
 	string colorPhone;
 	size_t phoneCounter;
 	vector<int> num;

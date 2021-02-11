@@ -5,6 +5,7 @@ class HeadPhones :
 {
 public:
 	void input();
+	void deleteProducts();
 	void setNameCompany(const string& nameCompany) override;
 	void setModelProduct(const string& model) override;
 	void setYearManufacture(const string& date) override; 
@@ -17,8 +18,10 @@ public:
 private:
 	ofstream outData;
 	string nameCompany;
+	string typeHeadphones;
 	string model;
 	string connect;
+	string dates;
 	string price;
 	string colorHeadPhones;
 	size_t headphonesCounter;

@@ -87,7 +87,7 @@ void UserMenu()
 	do
 	{
 		CLEEN;
-		cout << " ________________________" << endl;
+		cout << " ________________________ " << endl;
 		cout << "|   USER SHOPING STORE   |" << endl;
 		cout << "|------------------------|" << endl;
 		cout << "| 1. Show products       |" << endl;

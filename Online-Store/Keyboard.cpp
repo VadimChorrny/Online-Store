@@ -3,7 +3,7 @@
 void Keyboard::input()
 {
 	system("cls");
-	/*cout << "~~~WORKED KEYBOARD~~~" << endl;
+	/*
 	
 	outData.open("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Keyboard.csv", ios::app);
 
@@ -55,7 +55,9 @@ void Keyboard::input()
 
 	cout << "~~~~~~~~~~~~~~~~~~~~~" << endl;*/
 
-	cin.ignore(32767, '\n');
+	//cin.ignore(32767, '\n');
+	CLEEN;
+	cout << "~~~WORKED KEYBOARD~~~" << endl;
 	cout << "Enter name company : ";
 	cin >> d.nameCompany;
 	cout << "Enter type : ";
@@ -75,8 +77,8 @@ void Keyboard::input()
 	if (fout.is_open())
 	{
 		fout << "-------" << d.nameCompany << "-------" << endl;
-		fout << d.typeKeyboard << "   " << '\"' << d.nameCompany << '\"' << endl;
 		fout << d.nameCompany << "   " << '\"' << d.nameCompany << '\"' << endl;
+		fout << d.typeKeyboard << "   " << '\"' << d.nameCompany << '\"' << endl;
 		fout << d.model << "   " << '\"' << d.nameCompany << '\"' << endl;
 		fout << d.connect << "   " << '\"' << d.nameCompany << '\"' << endl;
 		fout << d.colorKeyboard << "   " << '\"' << d.nameCompany << '\"' << endl;
@@ -88,7 +90,7 @@ void Keyboard::input()
 	else
 		cout << "Error: The file was not opened.";
 	fout.close();
-
+	cout << "~~~~~~~~~~~~~~~~~~~~~" << endl;
 	printKeyboard();
 }
 
@@ -155,30 +157,62 @@ void Keyboard::generateNumberProduct()
 	cout << endl;
 }
 
-void Keyboard::deleteProduct()
+//void Keyboard::deleteProduct()
+//{
+//	outData.open("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Keyboard.csv", ios_base::trunc);
+//	
+//	if (!outData)
+//	{
+//		cerr << "error" << endl;
+//	}
+//	else if(!name_.empty() && !model_.empty())
+//	{
+//		typeKeyboard_.pop_back();
+//		name_.pop_back();
+//		model_.pop_back();
+//		yearManufacture_.pop_back();
+//		color_.pop_back();
+//		price_.pop_back();
+//		connect_.pop_back();
+//
+//		save();
+//	}
+//	outData.close();
+//}
+
+void Keyboard::deleteProducts()
 {
-	outData.open("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Keyboard.csv", ios_base::trunc);
-	
-	if (!outData)
+	vector<string> result;
+	string name, s;
+	cin.ignore(32767, '\n');
+	getline(cin, name);
+	ifstream fout("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Keyboard.csv");
+	if (fout.is_open())
 	{
-		cerr << "error" << endl;
+		while (getline(fout, s))
+		{
+			if (s.find(name) == string::npos)
+				result.push_back(s);
+		}
 	}
-	else if(!name_.empty() && !model_.empty())
+	else
+		cerr << "Error: The file was not opened." << endl;
+	fout.close();
+	ofstream fsut("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Keyboard.csv", std::ofstream::out | std::ofstream::trunc);
+	fsut.close();
+	ofstream fomt("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Keyboard.csv", ios::out | ios::app);
+	if (fomt.is_open())
 	{
-		typeKeyboard_.pop_back();
-		name_.pop_back();
-		model_.pop_back();
-		yearManufacture_.pop_back();
-		color_.pop_back();
-		price_.pop_back();
-		connect_.pop_back();
-
-		save();
+		for (int i = 0; i < result.size(); i++)
+			fomt << result[i] << endl;
+		cout << "Information deleted" << endl;
+		system("pause");
+		fomt.close();
 	}
-	outData.close();
+	else
+		cerr << "Error: The file was not opened." << endl;
+	fout.close();
 }
-
-
 
 void Keyboard::setConnectKeyboard(const string& connect)
 {

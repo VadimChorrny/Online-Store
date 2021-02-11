@@ -2,50 +2,84 @@
 
 void Monitor::input()
 {
-	system("cls");
-	outData.open("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Monitor.csv", ios::app);
-	cout << "~~~~~WORKED MONITOR~~~~~" << endl;
-	++monitorCounter;
-
-	cout << "Enter name company monitor:\t";
+	CLEEN;
+	cout << "~~~WORKED MONITOR~~~" << endl;
+	cout << "Enter name company : ";
 	cin >> name;
-	setNameCompany(name);
-	outData << name << endl;
-
-	cout << "Enter model monitor:\t";
-	cin >> model;
-	setModelProduct(model);
-	outData << model << endl;
-
-	cout << "Enter year manufacture product:\t";
-	cin >> date;
-	setYearManufacture(date);
-	outData << date << endl;
-
-
-	cout << "Enter type monitor:\t";
+	cout << "Enter type monitor : ";
 	cin >> typeMonitor;
-	setTypeMonitor(typeMonitor);
-	outData << typeMonitor << endl;
 
-	cout << "Enter type matrix:\t";
-	cin >> typeMatrix;
-	setTypeMatrix(typeMatrix);
-	outData << typeMatrix << endl;
-
-	cout << "Enter length monitor:\t";
+	cout << "Enter length monitor : ";
 	cin >> lengthMonitor;
-	setLengthMonitor(lengthMonitor);
-	outData << lengthMonitor << endl;
 
-	cout << "Enter price for monitor:\t";
+	cout << "Enter type matrix : ";
+	cin >> typeMatrix;
+
+	cout << "Enter model : ";
+	cin >> model;
+	cout << "Enter connect : ";
+	cin.ignore();
+	cin >> connect;
+	cout << "Enter date : ";
+	cin >> date;
+
+	cout << "Enter price : ";
 	cin >> priceMonitor;
-	setPriceMonitor(priceMonitor);
-	outData << priceMonitor << endl;
-
+	ofstream fout("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Monitor.csv", ios::out | ios::app);
+	if (fout.is_open())
+	{
+		fout << "-------" << name << "-------" << endl;
+		fout << name << "   " << '\"' << name << '\"' << endl;
+		fout << typeMonitor << "   " << '\"' << name << '\"' << endl;
+		fout << typeMatrix << "   " << '\"' << name << '\"' << endl;
+		fout << model << "   " << '\"' << name << '\"' << endl;
+		fout << connect << "   " << '\"' << name << '\"' << endl;
+		fout << date << '\"' << name << '\"' << endl;
+		fout << lengthMonitor << "   " << '\"' << name << '\"' << endl;
+		fout << priceMonitor << "   " << '\"' << name << '\"' << endl;
+		fout << "-------" << name << "-------" << endl;
+		fout << endl;
+		cout << "data written successfully" << endl;
+	}
+	else
+		cout << "Error: The file was not opened.";
+	fout.close();
 	cout << "~~~~~~~~~~~~~~~~~~~~~" << endl;
-
 	printMonitor();
+}
+
+void Monitor::deleteProducts()
+{
+	vector<string> result;
+	string name, s;
+	cin.ignore(32767, '\n');
+	getline(cin, name);
+	ifstream fout("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Monitor.csv");
+	if (fout.is_open())
+	{
+		while (getline(fout, s))
+		{
+			if (s.find(name) == string::npos)
+				result.push_back(s);
+		}
+	}
+	else
+		cerr << "Error: The file was not opened." << endl;
+	fout.close();
+	ofstream fsut("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Monitor.csv", std::ofstream::out | std::ofstream::trunc);
+	fsut.close();
+	ofstream fomt("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Monitor.csv", ios::out | ios::app);
+	if (fomt.is_open())
+	{
+		for (int i = 0; i < result.size(); i++)
+			fomt << result[i] << endl;
+		cout << "Information deleted" << endl;
+		system("pause");
+		fomt.close();
+	}
+	else
+		cerr << "Error: The file was not opened." << endl;
+	fout.close();
 }
 
 void Monitor::setNameCompany(const string& nameCompany)
@@ -133,6 +167,8 @@ void Monitor::printMonitor() const
 	cout << "Type monitor:\t" << typeMonitor << endl;
 	cout << "Type matrix:\t" << typeMatrix << endl;
 	cout << "Length monitor:\t" << lengthMonitor << "dm" << endl;
+	cout << "Date : " << date;
+	cout << "Model : " << model << endl;
 	cout << "Price:\t" << priceMonitor << "$" << endl;
 	Monitor mon;
 	mon.generateNumberProduct();

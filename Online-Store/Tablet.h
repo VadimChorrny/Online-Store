@@ -7,6 +7,7 @@ class Tablet : public Product
 public:
 	
 	void input();
+	void deleteProducts();
 	void setNameCompany(const string& nameCompany) override;
 	void setModelProduct(const string& model) override;
 	void setYearManufacture(const string& date) override;
@@ -20,6 +21,7 @@ public:
 private:
 	ofstream outData;
 	string nameCompany;
+	string type;
 	string model;
 	string charging;
 	string price;

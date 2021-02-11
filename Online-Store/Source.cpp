@@ -4,5 +4,5 @@
 
 int main()
 {
-	Login();
+	AdminMenu();
 }

@@ -5,6 +5,7 @@ class Monitor :
 {
 public:
 	void input();
+	void deleteProducts();
 	void setNameCompany(const string& nameCompany) override;
 	void setModelProduct(const string& model) override;
 	void setYearManufacture(const string& date) override;
@@ -22,6 +23,7 @@ private:
 	size_t lengthMonitor;
 	size_t priceMonitor;
 	size_t monitorCounter;
+	string connect;
 	ofstream outData;
 	string model;
 	string date;

@@ -2,51 +2,84 @@
 
 void Mouse::input()
 {
-	system("cls");
-	outData.open("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Mouse.csv", ios::app);
+	CLEEN;
 	cout << "~~~WORKED MOUSE~~~" << endl;
-	++mouseCounter;
-	cout << "Enter name company:\t";
+	cout << "Enter name company : ";
 	cin >> name;
-	setNameCompany(name);
-	outData << name << endl;
-
-	cout << "Enter model mouse:\t";
-	cin >> model;
-	setModelProduct(model);
-	outData << model << endl;
-
-	cout << "Enter year manufacture product:\t";
-	cin >> date;
-	setYearManufacture(date);
-	outData << date << endl;
-
-	cout << "Enter type mouse:\t";
+	cout << "Enter type mouse : ";
 	cin >> typeMouse;
-	setTypeMouse(typeMouse);
-	outData << typeMouse << endl;
 
-	cout << "Enter connect mouse:\t";
+	cout << "Enter model : ";
+	cin >> model;
+	cout << "Enter connect : ";
+	cin.ignore();
 	cin >> connect;
-	setConnectMouse(connect);
-	outData << connect << endl;
+	cout << "Enter date : ";
+	cin >> date;
 
-	cout << "Enter color mouse:\t";
-	cin >> color;
-	setColorMouse(color);
-	outData << color << endl;
-
-	cout << "Enter max click mouse";
+	cout << "Enter max-click mouse : ";
 	cin >> MAX_CLICK;
-	setMaxClickMouse(MAX_CLICK);
-	outData << MAX_CLICK << endl;
 
-	cout << "Enter price mouse:\t";
+	cout << "Enter color mouse : ";
+	cin >> color;
+
+	cout << "Enter price : ";
 	cin >> price;
-	setPriceMouse(price);
-	outData << price << endl;
+	ofstream fout("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Mouse.csv", ios::out | ios::app);
+	if (fout.is_open())
+	{
+		fout << "-------" << name << "-------" << endl;
+		fout << name << "   " << '\"' << name << '\"' << endl;
+		fout << typeMouse << "   " << '\"' << name << '\"' << endl;
+		fout << model << "   " << '\"' << name << '\"' << endl;
+		fout << connect << "   " << '\"' << name << '\"' << endl;
+		fout << date << '\"' << name << '\"' << endl;
+		fout << MAX_CLICK << "   " << '\"' << name << '\"' << endl;
+		fout << color << "   " << '\"' << name << '\"' << endl;
+		fout << price << "   " << '\"' << name << '\"' << endl;
+		fout << "-------" << name << "-------" << endl;
+		fout << endl;
+		cout << "data written successfully" << endl;
+	}
+	else
+		cout << "Error: The file was not opened.";
+	fout.close();
 	cout << "~~~~~~~~~~~~~~~~~~~~~" << endl;
 	printMouse();
+}
+
+void Mouse::deleteProducts()
+{
+	vector<string> result;
+	string name, s;
+	cin.ignore(32767, '\n');
+	getline(cin, name);
+	ifstream fout("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Mouse.csv");
+	if (fout.is_open())
+	{
+		while (getline(fout, s))
+		{
+			if (s.find(name) == string::npos)
+				result.push_back(s);
+		}
+	}
+	else
+		cerr << "Error: The file was not opened." << endl;
+	fout.close();
+	ofstream fsut("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Mouse.csv", std::ofstream::out | std::ofstream::trunc);
+	fsut.close();
+	ofstream fomt("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Mouse.csv", ios::out | ios::app);
+	if (fomt.is_open())
+	{
+		for (int i = 0; i < result.size(); i++)
+			fomt << result[i] << endl;
+		cout << "Information deleted" << endl;
+		system("pause");
+		fomt.close();
+	}
+	else
+		cerr << "Error: The file was not opened." << endl;
+	fout.close();
 }
 
 void Mouse::setNameCompany(const string& nameCompany)

@@ -1,21 +1,17 @@
 
 
 
--------Razer-------
-membrana   "Razer"
-Razer   "Razer"
-Cynosa   "Razer"
-lite   "Razer"
-white   "Razer"
-199   "Razer"
--------Razer-------
 
--------test-------
-test   "test"
-test   "test"
-test   "test"
-test   "test"
-test   "test"
-test   "test"
--------test-------
+
+Type keyboard:    "mechanic"
+Model :    "sp50-30"
+Connect:    "wirelles"
+Color :    "blue"
+Price   "100"
+
+Type keyboard:    "fdsfsd"
+Model :    "fsdfsd"
+Connect:    "fsdfdsf"
+Color :    "fdsfds"
+Price   "fsdfsd"
 

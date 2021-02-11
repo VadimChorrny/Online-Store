@@ -19,6 +19,7 @@ void Product::input()
 	cout << "~~~~~~INPUT~~~~~~" << endl;
 	cout << endl;
 	cout << "Enter type product:\t" << endl;
+	cout << "For example - (Keyboard...Phone...)" << endl;
 	cin >> product.typeProduct;
 	if (product.typeProduct == "Keyboard" || product.typeProduct == "keyboard")
 	{
@@ -433,45 +434,59 @@ void Product::deleteProduct()
 	}
 	else if (answer == "Mouse" || answer == "mouse")
 	{
-		ofstream f("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Mouse.csv");
+		/*ofstream f("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Mouse.csv");
 		f.open("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Mouse.csv", ofstream::binary | ofstream::out | ofstream::in);
 		f.seekp(1);
-		f.close();
+		f.close();*/
+		Mouse m;
+		m.deleteProducts();
 	}
 	else if (answer == "Monitor" || answer == "monitor")
 	{
-		ofstream f("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Monitor.csv");
+		/*ofstream f("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Monitor.csv");
 		f.open("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Monitor.csv", ofstream::binary | ofstream::out | ofstream::in);
 		f.seekp(1);
-		f.close();
+		f.close();*/
+		Monitor m;
+		m.deleteProducts();
 	}
 	else if (answer == "Phone" || answer == "phone")
 	{
-		ofstream f("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Phone.csv");
+		/*ofstream f("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Phone.csv");
 		f.open("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Phone.csv", ofstream::binary | ofstream::out | ofstream::in);
 		f.seekp(1);
-		f.close();
+		f.close();*/
+		Phone p;
+		p.deleteProducts();
 	}
 	else if (answer == "Tablet" || answer == "tablet")
 	{
-		ofstream f("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Tablet.csv");
+		/*ofstream f("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Tablet.csv");
 		f.open("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Tablet.csv", ofstream::binary | ofstream::out | ofstream::in);
 		f.seekp(1);
-		f.close();
+		f.close();*/
+
+		Tablet t;
+		t.deleteProducts();
 	}
 	else if (answer == "Laptop" || answer == "laptop")
 	{
-		ofstream f("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Laptop.csv");
+		/*ofstream f("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Laptop.csv");
 		f.open("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Laptop.csv", ofstream::binary | ofstream::out | ofstream::in);
 		f.seekp(1);
-		f.close();
+		f.close();*/
+
+		Laptop l;
+		l.deleteProducts();
 	}
 	else if (answer == "Headphones" || answer == "headphones")
 	{
-		ofstream f("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Headphones.csv");
+		/*ofstream f("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Headphones.csv");
 		f.open("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Headphones.csv", ofstream::binary | ofstream::out | ofstream::in);
 		f.seekp(1);
-		f.close();
+		f.close();*/
+		HeadPhones h;
+		h.deleteProducts();
 	}
 	else cerr << "Error with del!" << endl;
 	CLEEN;

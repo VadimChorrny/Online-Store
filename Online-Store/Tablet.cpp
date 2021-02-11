@@ -1,45 +1,80 @@
 #include "Tablet.h"
 
-#include "Tablet.h"
-
 void Tablet::input()
 {
-	system("cls");
-	outData.open("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Tablet.csv", ios::app);
-	cout << "~~~WORKED TABLET~~~" << endl;
-	++tabletCounter;
-
-	cout << "Enter name company:\t";
+	CLEEN;
+	cout << "~~~WORKED PHONE~~~" << endl;
+	cout << "Enter name company : ";
 	cin >> nameCompany;
-	setNameCompany(nameCompany);
-	outData << nameCompany << endl;
-
-	cout << "Enter model tablet:\t";
+	cout << "Enter type : ";
+	cin >> type;
+	cout << "Enter model : ";
 	cin >> model;
-	setModelProduct(model);
-	outData << model << endl;
-
-	cout << "Enter year manufacture product:\t";
-	cin >> date;
-	setYearManufacture(date);
-	outData << date << endl;
-
-	cout << "Enter charging tablet:\t";
+	cout << "Enter connect : ";
+	cin.ignore();
 	cin >> charging;
-	setChargingTablet(charging);
-	outData << charging << endl;
+	cout << "Enter date : ";
+	cin >> date;
 
-	cout << "Enter color tablet:\t";
+	cout << "Enter color phone : ";
 	cin >> colorTablet;
-	setColorTablet(colorTablet);
-	outData << colorTablet << endl;
 
-	cout << "Enter price tablet:\t";
+	cout << "Enter price : ";
 	cin >> price;
-	setPriceTablet(price);
-	outData << price << endl;
+	ofstream fout("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Tablet.csv", ios::out | ios::app);
+	if (fout.is_open())
+	{
+		fout << "-------" << nameCompany << "-------" << endl;
+		fout << nameCompany << "   " << '\"' << nameCompany << '\"' << endl;
+		fout << type << "   " << '\"' << nameCompany << '\"' << endl;
+		fout << model << "   " << '\"' << nameCompany << '\"' << endl;
+		fout << charging << "   " << '\"' << nameCompany << '\"' << endl;
+		fout << date << '\"' << nameCompany << '\"' << endl;
+		fout << colorTablet << "   " << '\"' << nameCompany << '\"' << endl;
+		fout << price << "   " << '\"' << nameCompany << '\"' << endl;
+		fout << "-------" << nameCompany << "-------" << endl;
+		fout << endl;
+		cout << "data written successfully" << endl;
+	}
+	else
+		cout << "Error: The file was not opened.";
+	fout.close();
 	cout << "~~~~~~~~~~~~~~~~~~~~~" << endl;
 	printTablet();
+}
+
+void Tablet::deleteProducts()
+{
+	vector<string> result;
+	string name, s;
+	cin.ignore(32767, '\n');
+	getline(cin, name);
+	ifstream fout("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Tablet.csv");
+	if (fout.is_open())
+	{
+		while (getline(fout, s))
+		{
+			if (s.find(name) == string::npos)
+				result.push_back(s);
+		}
+	}
+	else
+		cerr << "Error: The file was not opened." << endl;
+	fout.close();
+	ofstream fsut("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Tablet.csv", std::ofstream::out | std::ofstream::trunc);
+	fsut.close();
+	ofstream fomt("C:\\Users\\vadim_oyanwuw\\source\\repos\\Online-Store\\Online-Store\\Products\\Tablet.csv", ios::out | ios::app);
+	if (fomt.is_open())
+	{
+		for (int i = 0; i < result.size(); i++)
+			fomt << result[i] << endl;
+		cout << "Information deleted" << endl;
+		system("pause");
+		fomt.close();
+	}
+	else
+		cerr << "Error: The file was not opened." << endl;
+	fout.close();
 }
 
 void Tablet::setNameCompany(const string& nameCompanyTablet)
